@@ -1,0 +1,17 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.0'
+use_frameworks!
+inhibit_all_warnings!
+
+target ‘diyplayer’ do
+    # pod swift
+    pod 'Moya', '9.0.0'
+    pod 'ObjectMapper', '3.0.0'
+    pod 'Kingfisher', '4.1.0'
+    pod 'SnapKit', '4.0.0'
+    pod 'Charts', '3.0.4'
+    pod 'DLRadioButton', '~> 1.4'
+    
+    # pod objective-c
+    pod 'MBProgressHUD', '1.0.0'
+end
