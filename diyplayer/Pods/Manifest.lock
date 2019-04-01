@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (4.8.2)
+  - Alamofire-SwiftyJSON (3.0.0):
+    - Alamofire (~> 4.5)
+    - SwiftyJSON (~> 4.0.0)
   - Charts (3.0.4):
     - Charts/Core (= 3.0.4)
   - Charts/Core (3.0.4)
@@ -14,8 +17,10 @@ PODS:
   - ObjectMapper (3.4.2)
   - Result (3.2.4)
   - SnapKit (4.0.0)
+  - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
+  - Alamofire-SwiftyJSON
   - Charts (= 3.0.4)
   - DLRadioButton (~> 1.4)
   - Kingfisher (= 4.1.0)
@@ -23,10 +28,12 @@ DEPENDENCIES:
   - Moya (= 9.0.0)
   - ObjectMapper (~> 3.3)
   - SnapKit (= 4.0.0)
+  - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Alamofire-SwiftyJSON
     - Charts
     - DLRadioButton
     - Kingfisher
@@ -35,9 +42,11 @@ SPEC REPOS:
     - ObjectMapper
     - Result
     - SnapKit
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Alamofire-SwiftyJSON: 2b3649d57dc7bb2880fb8b86f8bb969397666916
   Charts: 0705898046257443f0afbbc3179f4b67507b6e48
   DLRadioButton: d7c4e225ed0e8013cef7be61455230c7557ad7c1
   Kingfisher: f14df8cbe576bf55f211fa589e9869bceb4ea87d
@@ -46,7 +55,8 @@ SPEC CHECKSUMS:
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 473c1c86a2a75073c3fa56c9814aee24c6b20cce
+PODFILE CHECKSUM: b372ba0fae6f99eff20efe7cb15403689bae3850
 
 COCOAPODS: 1.5.2

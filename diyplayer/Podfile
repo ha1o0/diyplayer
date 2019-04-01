@@ -11,7 +11,8 @@ target ‘diyplayer’ do
     pod 'SnapKit', '4.0.0'
     pod 'Charts', '3.0.4'
     pod 'DLRadioButton', '~> 1.4'
-    
+    pod 'SwiftyJSON', '~> 4.0'
+    pod 'Alamofire-SwiftyJSON'
     # pod objective-c
     pod 'MBProgressHUD', '1.0.0'
 end

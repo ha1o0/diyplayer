@@ -26,7 +26,8 @@ class DiyPlayerView: UIView {
     var player: AVPlayer!
     var playerLayer: AVPlayerLayer!
     var isPlay = false
-    var videoUrl = "http://221.228.226.23/11/t/j/v/b/tjvbwspwhqdmgouolposcsfafpedmb/sh.yinyuetai.com/691201536EE4912BF7E4F1E2C67B8119.mp4"
+//    var videoUrl = "http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8"
+    var videoUrl = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
 //    var videoUrl = "http://221.228.226.5/15/t/s/h/v/tshvhsxwkbjlipfohhamjkraxuknsc/sh.yinyuetai.com/88DC015DB03C829C2126EEBBB5A887CB.mp4"
     var totalTimeSeconds = 0
     var totalTime = "00:00"

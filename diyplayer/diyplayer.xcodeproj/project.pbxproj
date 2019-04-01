@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6EE3970518FE9F8AB8E5E207 /* Pods_diyplayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E8C550234172A5DB995921 /* Pods_diyplayer.framework */; };
+		CE2E97852251E97B00EC8CD3 /* Alamofire-SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E97842251E97B00EC8CD3 /* Alamofire-SwiftyJSON.swift */; };
 		E96DA14A21319BC200752560 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DA14921319BC200752560 /* AppDelegate.swift */; };
 		E96DA15121319BC200752560 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E96DA15021319BC200752560 /* Assets.xcassets */; };
 		E96DA15F21319BC200752560 /* diyplayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DA15E21319BC200752560 /* diyplayerTests.swift */; };
@@ -43,6 +44,7 @@
 		36E8C550234172A5DB995921 /* Pods_diyplayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_diyplayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F42D2D9D83A5244D7EB58F /* Pods-diyplayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-diyplayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-diyplayer/Pods-diyplayer.release.xcconfig"; sourceTree = "<group>"; };
 		CBBEA0D969246F8C165F21D0 /* Pods-diyplayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-diyplayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-diyplayer/Pods-diyplayer.debug.xcconfig"; sourceTree = "<group>"; };
+		CE2E97842251E97B00EC8CD3 /* Alamofire-SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire-SwiftyJSON.swift"; sourceTree = "<group>"; };
 		E96DA14621319BC200752560 /* diyplayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = diyplayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E96DA14921319BC200752560 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E96DA15021319BC200752560 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 		E9F4373821344AB90011B517 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CE2E97842251E97B00EC8CD3 /* Alamofire-SwiftyJSON.swift */,
 				E9F4373921344ACA0011B517 /* CustomSlider.swift */,
 				E9F4373B213580400011B517 /* TimeUtil.swift */,
 				E9F4373D213583B90011B517 /* Constants.swift */,
@@ -313,6 +316,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-diyplayer/Pods-diyplayer-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-SwiftyJSON/Alamofire_SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/DLRadioButton/DLRadioButton.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
@@ -321,10 +325,12 @@
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire_SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLRadioButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
@@ -333,6 +339,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -364,6 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE2E97852251E97B00EC8CD3 /* Alamofire-SwiftyJSON.swift in Sources */,
 				E96DA14A21319BC200752560 /* AppDelegate.swift in Sources */,
 				E9F4372F2132A21D0011B517 /* DiyPlayerView.swift in Sources */,
 				E9F437322132BBAB0011B517 /* HomeViewController.swift in Sources */,
