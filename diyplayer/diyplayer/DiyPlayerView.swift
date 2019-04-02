@@ -10,6 +10,7 @@ import UIKit
 import AVKit
 import AVFoundation
 import SnapKit
+import MediaPlayer
 
 class DiyPlayerView: UIView {
     
@@ -26,6 +27,7 @@ class DiyPlayerView: UIView {
     var player: AVPlayer!
     var playerLayer: AVPlayerLayer!
     var isPlay = false
+    var systemVolumeView = MPVolumeView()
 //    var videoUrl = "http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8"
     var videoUrl = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
 //    var videoUrl = "http://221.228.226.5/15/t/s/h/v/tshvhsxwkbjlipfohhamjkraxuknsc/sh.yinyuetai.com/88DC015DB03C829C2126EEBBB5A887CB.mp4"
@@ -43,9 +45,51 @@ class DiyPlayerView: UIView {
         super.init(coder: aDecoder)
         print("coder")
     }
-    
+
+    func addGesture() {
+        // 双击播放和暂停手势
+        let doubleTap = UITapGestureRecognizer(target: self, action:#selector(doubleTapPlayer))
+        doubleTap.numberOfTapsRequired = 2
+        self.playerView.addGestureRecognizer(doubleTap)
+        // 滑动+-音量手势
+        let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(swipeUpVolume))
+        swipeUp.direction = .up
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(swipeDownVolume))
+        swipeDown.direction = .down
+        self.playerView.addGestureRecognizer(swipeUp)
+        self.playerView.addGestureRecognizer(swipeDown)
+    }
+
+    func initMPVolumeView() {
+        systemVolumeView.frame.size = CGSize.init(width: 200, height: 1)
+        systemVolumeView.center = self.playerView.center
+        systemVolumeView.isHidden = true
+        self.playerView.addSubview(systemVolumeView)
+    }
+
+    private func getSystemVolumeSlider() -> UISlider {
+        var volumeViewSlider = UISlider()
+        for subView in systemVolumeView.subviews {
+            if type(of: subView).description() == "MPVolumeSlider" {
+                volumeViewSlider = subView as! UISlider
+                return volumeViewSlider
+            }
+        }
+        return volumeViewSlider
+    }
+
+    private func getSystemVolumeValue() -> Float {
+        return self.getSystemVolumeSlider().value
+    }
+
+    private func setSystemVolumeValue(_ value: Float) {
+        self.getSystemVolumeSlider().value = value
+    }
+
     func commonInit() {
         initSlider()
+        addGesture()
+        initMPVolumeView()
         print("commoninit")
         guard let url = URL(string: videoUrl) else {
             print(videoUrl)
@@ -145,7 +189,24 @@ class DiyPlayerView: UIView {
         isPlay = !isPlay
         sender.setImage(isPlay ? UIImage(named: "pause") : UIImage(named: "play"), for: .normal)
     }
-    
+
+    @objc func doubleTapPlayer() {
+        print("double tap")
+        playOrPause(self.playBtn)
+    }
+
+    @objc func swipeUpVolume() {
+        print("swipe up", self.getSystemVolumeValue())
+        self.setSystemVolumeValue(self.getSystemVolumeValue() + 0.1)
+        print("swipe up", self.getSystemVolumeValue())
+    }
+
+    @objc func swipeDownVolume() {
+        print("swipe down", self.getSystemVolumeValue())
+        self.setSystemVolumeValue(self.getSystemVolumeValue() - 0.1)
+        print("swipe down", self.getSystemVolumeValue())
+    }
+
     @objc func playToEnd() {
         isPlay = false
         playBtn.setImage(UIImage(named: "play"), for: .normal)
