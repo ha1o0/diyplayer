@@ -23,17 +23,19 @@ class DiyPlayerView: UIView {
     @IBOutlet weak var timeDisplay: UILabel!
     @IBOutlet weak var cacheSlider: UISlider!
     
+    var loadingImageView: UIImageView!
     var playerItem: AVPlayerItem!
     var player: AVPlayer!
     var playerLayer: AVPlayerLayer!
     var isPlay = false
     var systemVolumeView = MPVolumeView()
-//    var videoUrl = "http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8"
     var videoUrl = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
-//    var videoUrl = "http://221.228.226.5/15/t/s/h/v/tshvhsxwkbjlipfohhamjkraxuknsc/sh.yinyuetai.com/88DC015DB03C829C2126EEBBB5A887CB.mp4"
     var totalTimeSeconds = 0
     var totalTime = "00:00"
     var currentTime = "00:00"
+    var sliderThumbFollowGesture = false
+    var justDrag: Int = 0 //防止拖动播放瞬间滑块闪回
+    var firstOpen = true
     override init(frame: CGRect) {
         super.init(frame: frame)
         print("frame")
@@ -87,18 +89,29 @@ class DiyPlayerView: UIView {
     }
 
     func commonInit() {
+        videoUrl = "http://vjs.zencdn.net/v/oceans.mp4"
+//        videoUrl = "https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_10mb.mp4"
+        let loadingGif = UIImage.gifImageWithName("loading")
+        loadingImageView = UIImageView(image: loadingGif)
+        self.playerView.addSubview(loadingImageView)
+        loadingImageView.snp.makeConstraints { (maker) in
+            maker.centerY.equalTo(self.playerView)
+            maker.centerX.equalTo(self.playerView)
+            maker.width.equalTo(33)
+            maker.height.equalTo(33)
+        }
+        loadingImageView.isHidden = true
         initSlider()
         addGesture()
         initMPVolumeView()
         print("commoninit")
         guard let url = URL(string: videoUrl) else {
             print(videoUrl)
-            fatalError("连接错误")
+            fatalError("播放地址错误")
         }
         let asset = AVAsset(url: url)
         playerItem = AVPlayerItem(asset: asset)
-        playerItem.addObserver(self, forKeyPath: "loadedTimeRanges", options: NSKeyValueObservingOptions.new, context: nil)
-        playerItem.addObserver(self, forKeyPath: "status", options: NSKeyValueObservingOptions.new, context: nil)
+        addPlayerObserver(playerItem: playerItem)
         player = AVPlayer(playerItem: playerItem)
         playerLayer = AVPlayerLayer(player: player)
         playerLayer.videoGravity = AVLayerVideoGravity.resizeAspect
@@ -107,6 +120,7 @@ class DiyPlayerView: UIView {
         self.playerView.layer.insertSublayer(playerLayer, at: 0)
         contentView.frame = self.bounds
         addSubview(contentView)
+        playOrPause(self.playBtn)
     }
     
     func initSlider() {
@@ -119,6 +133,10 @@ class DiyPlayerView: UIView {
         cacheSlider.setThumbImage(UIImage(named: "transparent"), for: .highlighted)
         cacheSlider.minimumValue = 0
         cacheSlider.value = 0
+        progressSlider.isContinuous = false
+//        progressSlider.addTarget(self, action: #selector(changeSliderValue:), for: UIControlEvents.RawValue)
+        progressSlider.addTarget(self, action: #selector(changeSliderValue(slider:)), for: UIControlEvents.valueChanged)
+        progressSlider.addTarget(self, action: #selector(startToChangeSliderValue(slider:)), for: UIControlEvents.touchDragInside)
     }
     
     override func layoutSubviews() {
@@ -130,7 +148,7 @@ class DiyPlayerView: UIView {
                                of object: Any?,
                                change: [NSKeyValueChangeKey : Any]?,
                                context: UnsafeMutableRawPointer?) {
-        // Only handle observations for the playerItemContext
+//         Only handle observations for the playerItemContext
 //        guard context == &playerItemContext else {
 //            super.observeValue(forKeyPath: keyPath,
 //                               of: object,
@@ -140,6 +158,7 @@ class DiyPlayerView: UIView {
 //        }
         
         if keyPath == #keyPath(AVPlayerItem.status) {
+            
             let status: AVPlayerItemStatus
             
             // Get the status change from the change dictionary
@@ -152,15 +171,49 @@ class DiyPlayerView: UIView {
             // Switch over the status
             switch status {
             case .readyToPlay:
+                
+                if (Int(playerItem.duration.timescale) == 0 || player == nil) {
+                    return
+                }
                 totalTimeSeconds = Int(playerItem.duration.value) / Int(playerItem.duration.timescale)
                 progressSlider.maximumValue = Float(totalTimeSeconds)
                 cacheSlider.maximumValue = Float(totalTimeSeconds)
                 totalTime = "\(TimeUtil.getTimeMinutesBySeconds(totalTimeSeconds)):\(TimeUtil.getTimeSecondBySeconds(totalTimeSeconds))"
                 timeDisplay.text = "00:00/\(totalTime)"
+                print("ready play")
                 NotificationCenter.default.addObserver(self, selector: #selector(playToEnd), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: self.player.currentItem)
-                player.addPeriodicTimeObserver(forInterval: CMTimeMakeWithSeconds(1/30.0, Int32(NSEC_PER_SEC)), queue: nil, using: { (time) in
-                    self.timeDisplay.text = "\(TimeUtil.getTimeMinutesBySeconds(Int(CMTimeGetSeconds(time)))):\(TimeUtil.getTimeSecondBySeconds(Int(CMTimeGetSeconds(time))))/\(self.totalTime)"
-                    self.progressSlider.value = Float(CMTimeGetSeconds(time))
+
+                player.addPeriodicTimeObserver(forInterval: CMTimeMakeWithSeconds(1/10.0, Int32(NSEC_PER_SEC)), queue: nil, using: { (time) in
+                    if (self.player == nil) {
+                        return
+                    }
+                    if let isPlaybackLikelyToKeepUp = self.player.currentItem?.isPlaybackLikelyToKeepUp {
+                        //do what ever you want with isPlaybackLikelyToKeepUp value, for example, show or hide a activity indicator.
+                        self.loadingImageView.isHidden = isPlaybackLikelyToKeepUp || !self.player.isPlaying
+                    }
+                    
+                    if let bufferEmpty = self.player.currentItem?.isPlaybackBufferEmpty {
+                        if (bufferEmpty && self.player.isPlaying) {
+                            self.player.play()
+                        }
+                    }
+                    
+                    if (self.player.currentItem?.isPlaybackBufferFull) != nil {
+                        self.loadingImageView.isHidden = true
+                        if (self.player.isPlaying) {
+                            self.player.play()
+                        }
+                    }
+   
+                    if (!self.sliderThumbFollowGesture) {
+                        self.timeDisplay.text = "\(TimeUtil.getTimeMinutesBySeconds(Int(CMTimeGetSeconds(time)))):\(TimeUtil.getTimeSecondBySeconds(Int(CMTimeGetSeconds(time))))/\(self.totalTime)"
+                        if (self.justDrag > 0) {
+                            self.justDrag -= 1
+                        } else {
+                            self.progressSlider.value = Float(CMTimeGetSeconds(time))
+                        }
+                    }
+                    
                 })
                 
                 break
@@ -185,11 +238,29 @@ class DiyPlayerView: UIView {
     }
     
     @IBAction func playOrPause(_ sender: UIButton) {
-        isPlay ? player.pause() : player.play()
-        isPlay = !isPlay
-        sender.setImage(isPlay ? UIImage(named: "pause") : UIImage(named: "play"), for: .normal)
+        player.isPlaying ? player.pause() : player.play()
+        sender.setImage(player.isPlaying ? UIImage(named: "pause") : UIImage(named: "play"), for: .normal)
+        loadingImageView.isHidden = !player.isPlaying
+        print("isplaying", player.isPlaying)
     }
 
+    @objc func startToChangeSliderValue(slider:UISlider) {
+        print("start slider.value = %d",slider.value)
+        self.timeDisplay.text = "\(TimeUtil.getTimeMinutesBySeconds(Int(slider.value))):\(TimeUtil.getTimeSecondBySeconds(Int(slider.value)))/\(self.totalTime)"
+        sliderThumbFollowGesture = true
+    }
+    
+    @objc func changeSliderValue(slider:UISlider) {
+        print("slider.value = %d",slider.value)
+        justDrag = 2
+        player.pause()
+        player.seek(to: CMTimeMakeWithSeconds(Float64(slider.value), 64))
+        player.play()
+        loadingImageView.isHidden = !player.isPlaying
+        self.playBtn.setImage(UIImage(named: "pause"), for: .normal)
+        sliderThumbFollowGesture = false
+    }
+    
     @objc func doubleTapPlayer() {
         print("double tap")
         playOrPause(self.playBtn)
@@ -208,14 +279,43 @@ class DiyPlayerView: UIView {
     }
 
     @objc func playToEnd() {
-        isPlay = false
         playBtn.setImage(UIImage(named: "play"), for: .normal)
         playerItem.seek(to: kCMTimeZero) { (bool) in }
+        player.pause()
+    }
+    
+    func closePlayer(){
+        if ((player) != nil) {
+            player.pause()
+            removePlayerObserver(playerItem: playerItem)
+            player = nil
+            playerLayer.removeFromSuperlayer()
+        }
+    }
+    
+    func addPlayerObserver(playerItem:AVPlayerItem) {
+        playerItem.addObserver(self, forKeyPath: "loadedTimeRanges", options: .new, context: nil)
+        playerItem.addObserver(self, forKeyPath: "status", options: .new, context: nil)
+        playerItem.addObserver(self, forKeyPath: "playbackBufferEmpty", options: .new, context: nil)
+        playerItem.addObserver(self, forKeyPath: "playbackLikelyToKeepUp", options: .new, context: nil)
+        playerItem.addObserver(self, forKeyPath: "playbackBufferFull", options: .new, context: nil)
+    }
+    
+    func removePlayerObserver(playerItem:AVPlayerItem) {
+        playerItem.removeObserver(self, forKeyPath: "loadedTimeRanges")
+        playerItem.removeObserver(self, forKeyPath: "status")
+        playerItem.removeObserver(self, forKeyPath: "playbackBufferEmpty")
+        playerItem.removeObserver(self, forKeyPath: "playbackLikelyToKeepUp")
+        playerItem.removeObserver(self, forKeyPath: "playbackBufferFull")
     }
     
     deinit {
-        playerItem.removeObserver(self, forKeyPath: "loadedTimeRanges")
-        playerItem.removeObserver(self, forKeyPath: "status")
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
+    }
+}
+
+extension AVPlayer {
+    var isPlaying: Bool {
+        return self.rate != 0 && self.error == nil
     }
 }

@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  PlayViewController.swift
 //  diyplayer
 //
 //  Created by sidney on 2018/8/26.
@@ -11,7 +11,7 @@ import SnapKit
 import Alamofire
 import SwiftyJSON
 
-class HomeViewController: UIViewController {
+class PlayViewController: UIViewController {
 
     var diyPlayerView = DiyPlayerView()
     var responseButton = UIButton()
@@ -24,14 +24,12 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        let playerView = DiyPlayerView(frame: CGRect(x: 0, y: 40, width: UIScreen.main.bounds.width, height: 250))
-        playerView.commonInit()
-        self.view.addSubview(playerView)
-
+        self.navigationItem.leftBarButtonItem = nil
+        
+        diyPlayerView = DiyPlayerView(frame: CGRect(x: 0, y: 40, width: UIScreen.main.bounds.width, height: 250))
+        diyPlayerView.commonInit()
+        self.view.addSubview(diyPlayerView)
+        
         // input domain
         let uiInputView = UIView()
         uiInputView.backgroundColor = UIColor.gray
@@ -39,7 +37,7 @@ class HomeViewController: UIViewController {
         uiInputView.snp.makeConstraints { (maker) in
             maker.left.equalToSuperview().offset(0)
             maker.trailing.equalToSuperview().offset(0)
-            maker.top.equalTo(playerView.snp.bottom).offset(20)
+            maker.top.equalTo(diyPlayerView.snp.bottom).offset(20)
             maker.height.equalTo(50)
         }
         uiInputView.addSubview(self.domainName)
@@ -69,7 +67,7 @@ class HomeViewController: UIViewController {
             maker.center.equalToSuperview()
         }
         requestBtn.addTarget(self, action: #selector(getNetData), for: .touchUpInside)
-
+        
         // response
         let uiResponseView = UIView()
         uiResponseView.backgroundColor = UIColor.gray
@@ -86,6 +84,16 @@ class HomeViewController: UIViewController {
             maker.center.equalToSuperview()
         }
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.diyPlayerView.closePlayer()
     }
 
     @objc func getNetData() {
