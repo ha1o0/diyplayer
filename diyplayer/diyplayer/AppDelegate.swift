@@ -16,9 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var toast: MBProgressHUD?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+//        Thread.sleep(forTimeInterval: 3)
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = HomeViewController()
+        let navigationViewController = BaseNavigationViewController.init(rootViewController: AdViewController())
+        window?.rootViewController = navigationViewController;
         window?.makeKeyAndVisible()
         toast = MBProgressHUD(frame: UIScreen.main.bounds)
         window?.addSubview(toast!)

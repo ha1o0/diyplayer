@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6EE3970518FE9F8AB8E5E207 /* Pods_diyplayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E8C550234172A5DB995921 /* Pods_diyplayer.framework */; };
 		CE2E97852251E97B00EC8CD3 /* Alamofire-SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E97842251E97B00EC8CD3 /* Alamofire-SwiftyJSON.swift */; };
+		CE3D5EFA22C3D1FF00FE1F30 /* Image+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D5EF922C3D1FF00FE1F30 /* Image+Gif.swift */; };
+		CE3D5EFC22C3D7D000FE1F30 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = CE3D5EFB22C3D7D000FE1F30 /* loading.gif */; };
+		CEC16B9522C746F800F90ADE /* AdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC16B9322C746F800F90ADE /* AdViewController.swift */; };
+		CEC16B9622C746F800F90ADE /* AdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC16B9422C746F800F90ADE /* AdViewController.xib */; };
+		CEC16BA022C7500A00F90ADE /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC16B9E22C7500A00F90ADE /* BaseNavigationViewController.swift */; };
+		CEC16BA122C7500A00F90ADE /* BaseNavigationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC16B9F22C7500A00F90ADE /* BaseNavigationViewController.xib */; };
+		CEC16BA522C7A91F00F90ADE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC16BA322C7A91F00F90ADE /* HomeViewController.swift */; };
+		CEC16BA622C7A91F00F90ADE /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC16BA422C7A91F00F90ADE /* HomeViewController.xib */; };
 		E96DA14A21319BC200752560 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DA14921319BC200752560 /* AppDelegate.swift */; };
 		E96DA15121319BC200752560 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E96DA15021319BC200752560 /* Assets.xcassets */; };
 		E96DA15F21319BC200752560 /* diyplayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DA15E21319BC200752560 /* diyplayerTests.swift */; };
@@ -16,8 +23,8 @@
 		E9F437252131B76F0011B517 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9F437242131B76F0011B517 /* LaunchScreen.xib */; };
 		E9F4372D2132A0F10011B517 /* DiyPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9F4372C2132A0F10011B517 /* DiyPlayerView.xib */; };
 		E9F4372F2132A21D0011B517 /* DiyPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F4372E2132A21D0011B517 /* DiyPlayerView.swift */; };
-		E9F437322132BBAB0011B517 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F437302132BBAB0011B517 /* HomeViewController.swift */; };
-		E9F437332132BBAB0011B517 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9F437312132BBAB0011B517 /* HomeViewController.xib */; };
+		E9F437322132BBAB0011B517 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F437302132BBAB0011B517 /* PlayViewController.swift */; };
+		E9F437332132BBAB0011B517 /* PlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9F437312132BBAB0011B517 /* PlayViewController.xib */; };
 		E9F4373A21344ACA0011B517 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F4373921344ACA0011B517 /* CustomSlider.swift */; };
 		E9F4373C213580400011B517 /* TimeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F4373B213580400011B517 /* TimeUtil.swift */; };
 		E9F4373E213583B90011B517 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F4373D213583B90011B517 /* Constants.swift */; };
@@ -45,6 +52,14 @@
 		84F42D2D9D83A5244D7EB58F /* Pods-diyplayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-diyplayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-diyplayer/Pods-diyplayer.release.xcconfig"; sourceTree = "<group>"; };
 		CBBEA0D969246F8C165F21D0 /* Pods-diyplayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-diyplayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-diyplayer/Pods-diyplayer.debug.xcconfig"; sourceTree = "<group>"; };
 		CE2E97842251E97B00EC8CD3 /* Alamofire-SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire-SwiftyJSON.swift"; sourceTree = "<group>"; };
+		CE3D5EF922C3D1FF00FE1F30 /* Image+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Gif.swift"; sourceTree = "<group>"; };
+		CE3D5EFB22C3D7D000FE1F30 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = loading.gif; path = ../../../../Downloads/loading.gif; sourceTree = "<group>"; };
+		CEC16B9322C746F800F90ADE /* AdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewController.swift; sourceTree = "<group>"; };
+		CEC16B9422C746F800F90ADE /* AdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdViewController.xib; sourceTree = "<group>"; };
+		CEC16B9E22C7500A00F90ADE /* BaseNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationViewController.swift; sourceTree = "<group>"; };
+		CEC16B9F22C7500A00F90ADE /* BaseNavigationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseNavigationViewController.xib; sourceTree = "<group>"; };
+		CEC16BA322C7A91F00F90ADE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CEC16BA422C7A91F00F90ADE /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		E96DA14621319BC200752560 /* diyplayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = diyplayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E96DA14921319BC200752560 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E96DA15021319BC200752560 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,8 +73,8 @@
 		E9F437242131B76F0011B517 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		E9F4372C2132A0F10011B517 /* DiyPlayerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiyPlayerView.xib; sourceTree = "<group>"; };
 		E9F4372E2132A21D0011B517 /* DiyPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiyPlayerView.swift; sourceTree = "<group>"; };
-		E9F437302132BBAB0011B517 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		E9F437312132BBAB0011B517 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		E9F437302132BBAB0011B517 /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
+		E9F437312132BBAB0011B517 /* PlayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayViewController.xib; sourceTree = "<group>"; };
 		E9F4373921344ACA0011B517 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
 		E9F4373B213580400011B517 /* TimeUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeUtil.swift; sourceTree = "<group>"; };
 		E9F4373D213583B90011B517 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -70,7 +85,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EE3970518FE9F8AB8E5E207 /* Pods_diyplayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +113,70 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CEC16B9122C7469F00F90ADE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CEC16B9D22C74F8A00F90ADE /* Base */,
+				CEC16B9722C747B800F90ADE /* Play */,
+				CEC16BA222C7A8F500F90ADE /* Home */,
+				CEC16B9222C746C000F90ADE /* Ad */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CEC16B9222C746C000F90ADE /* Ad */ = {
+			isa = PBXGroup;
+			children = (
+				CEC16B9322C746F800F90ADE /* AdViewController.swift */,
+				CEC16B9422C746F800F90ADE /* AdViewController.xib */,
+			);
+			path = Ad;
+			sourceTree = "<group>";
+		};
+		CEC16B9722C747B800F90ADE /* Play */ = {
+			isa = PBXGroup;
+			children = (
+				E9F437302132BBAB0011B517 /* PlayViewController.swift */,
+				E9F437312132BBAB0011B517 /* PlayViewController.xib */,
+			);
+			path = Play;
+			sourceTree = "<group>";
+		};
+		CEC16B9822C747D200F90ADE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEC16B9922C747E300F90ADE /* player */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CEC16B9922C747E300F90ADE /* player */ = {
+			isa = PBXGroup;
+			children = (
+				E9F4372E2132A21D0011B517 /* DiyPlayerView.swift */,
+				E9F4372C2132A0F10011B517 /* DiyPlayerView.xib */,
+			);
+			path = player;
+			sourceTree = "<group>";
+		};
+		CEC16B9D22C74F8A00F90ADE /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				CEC16B9E22C7500A00F90ADE /* BaseNavigationViewController.swift */,
+				CEC16B9F22C7500A00F90ADE /* BaseNavigationViewController.xib */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		CEC16BA222C7A8F500F90ADE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CEC16BA322C7A91F00F90ADE /* HomeViewController.swift */,
+				CEC16BA422C7A91F00F90ADE /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		E96DA13D21319BC200752560 = {
 			isa = PBXGroup;
 			children = (
@@ -124,15 +202,14 @@
 		E96DA14821319BC200752560 /* diyplayer */ = {
 			isa = PBXGroup;
 			children = (
+				CEC16B9822C747D200F90ADE /* View */,
+				CEC16B9122C7469F00F90ADE /* Controller */,
 				E9F4373821344AB90011B517 /* Common */,
 				E96DA14921319BC200752560 /* AppDelegate.swift */,
 				E96DA15021319BC200752560 /* Assets.xcassets */,
 				E9F437242131B76F0011B517 /* LaunchScreen.xib */,
 				E96DA15521319BC200752560 /* Info.plist */,
-				E9F4372E2132A21D0011B517 /* DiyPlayerView.swift */,
-				E9F4372C2132A0F10011B517 /* DiyPlayerView.xib */,
-				E9F437302132BBAB0011B517 /* HomeViewController.swift */,
-				E9F437312132BBAB0011B517 /* HomeViewController.xib */,
+				CE3D5EFB22C3D7D000FE1F30 /* loading.gif */,
 			);
 			path = diyplayer;
 			sourceTree = "<group>";
@@ -162,6 +239,7 @@
 				E9F4373921344ACA0011B517 /* CustomSlider.swift */,
 				E9F4373B213580400011B517 /* TimeUtil.swift */,
 				E9F4373D213583B90011B517 /* Constants.swift */,
+				CE3D5EF922C3D1FF00FE1F30 /* Image+Gif.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -285,9 +363,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9F4372D2132A0F10011B517 /* DiyPlayerView.xib in Resources */,
+				CEC16B9622C746F800F90ADE /* AdViewController.xib in Resources */,
 				E9F437252131B76F0011B517 /* LaunchScreen.xib in Resources */,
+				CEC16BA122C7500A00F90ADE /* BaseNavigationViewController.xib in Resources */,
+				CEC16BA622C7A91F00F90ADE /* HomeViewController.xib in Resources */,
+				CE3D5EFC22C3D7D000FE1F30 /* loading.gif in Resources */,
 				E96DA15121319BC200752560 /* Assets.xcassets in Resources */,
-				E9F437332132BBAB0011B517 /* HomeViewController.xib in Resources */,
+				E9F437332132BBAB0011B517 /* PlayViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,10 +456,14 @@
 				CE2E97852251E97B00EC8CD3 /* Alamofire-SwiftyJSON.swift in Sources */,
 				E96DA14A21319BC200752560 /* AppDelegate.swift in Sources */,
 				E9F4372F2132A21D0011B517 /* DiyPlayerView.swift in Sources */,
-				E9F437322132BBAB0011B517 /* HomeViewController.swift in Sources */,
+				CEC16BA022C7500A00F90ADE /* BaseNavigationViewController.swift in Sources */,
+				CEC16BA522C7A91F00F90ADE /* HomeViewController.swift in Sources */,
+				E9F437322132BBAB0011B517 /* PlayViewController.swift in Sources */,
 				E9F4373C213580400011B517 /* TimeUtil.swift in Sources */,
 				E9F4373A21344ACA0011B517 /* CustomSlider.swift in Sources */,
+				CEC16B9522C746F800F90ADE /* AdViewController.swift in Sources */,
 				E9F4373E213583B90011B517 /* Constants.swift in Sources */,
+				CE3D5EFA22C3D1FF00FE1F30 /* Image+Gif.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +611,7 @@
 			baseConfigurationReference = CBBEA0D969246F8C165F21D0 /* Pods-diyplayer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WZMD84KKFL;
 				INFOPLIST_FILE = diyplayer/Info.plist;
@@ -541,6 +628,7 @@
 			baseConfigurationReference = 84F42D2D9D83A5244D7EB58F /* Pods-diyplayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WZMD84KKFL;
 				INFOPLIST_FILE = diyplayer/Info.plist;
