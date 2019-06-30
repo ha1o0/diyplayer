@@ -26,14 +26,15 @@ class AdViewController: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+        self.switchButton.isOn = false
 //        self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
 //        self.navigationController?.navigationBar.shadowImage = nil
     }
     
     @objc func switchDidChange(){
-        
-        self.navigationController?.pushViewController(PlayViewController(), animated: true)
-        
+        if (self.switchButton.isOn) {
+            self.navigationController?.pushViewController(HomeViewController(), animated: true)
+        }
     }
     /*
     // MARK: - Navigation

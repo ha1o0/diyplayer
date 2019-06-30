@@ -13,9 +13,11 @@ class BaseNavigationViewController: UINavigationController,UINavigationControlle
     override func viewDidLoad() {
         super.viewDidLoad()
         //navigationBar字体颜色设置
+        navigationBar.isHidden = true
         self.navigationBar.barTintColor = UIColor.green
+        self.navigationBar.tintColor = UIColor.green
         //navigationBar字体颜色设置
-        self.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
+        self.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.green]
         self.popDelegate = self.interactivePopGestureRecognizer?.delegate
         self.delegate = self
         // Do any additional setup after loading the view.
