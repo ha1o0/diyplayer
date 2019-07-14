@@ -91,7 +91,7 @@ class DiyPlayerView: UIView {
     func commonInit() {
         videoUrl = "http://vjs.zencdn.net/v/oceans.mp4"
 //        videoUrl = "https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_10mb.mp4"
-        let loadingGif = UIImage.gifImageWithName("loading")
+        let loadingGif = UIImage.gifImageWithName("juhua")
         loadingImageView = UIImageView(image: loadingGif)
         self.playerView.addSubview(loadingImageView)
         loadingImageView.snp.makeConstraints { (maker) in
