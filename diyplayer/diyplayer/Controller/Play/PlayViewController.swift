@@ -11,7 +11,7 @@ import SnapKit
 import Alamofire
 import SwiftyJSON
 
-class PlayViewController: UIViewController {
+class PlayViewController: BaseViewController {
 
     var diyPlayerView = DiyPlayerView()
     var responseButton = UIButton()
@@ -23,9 +23,7 @@ class PlayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationItem.leftBarButtonItem = nil
-        
+        navigationController?.isNavigationBarHidden = true
         diyPlayerView = DiyPlayerView(frame: CGRect(x: 0, y: 40, width: UIScreen.main.bounds.width, height: 250))
         diyPlayerView.commonInit()
         self.view.addSubview(diyPlayerView)
@@ -88,7 +86,11 @@ class PlayViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+        navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
     }
     
     override func viewDidDisappear(_ animated: Bool) {

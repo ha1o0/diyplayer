@@ -7,9 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE0554F322CE351200A9D4F3 /* ball.gif in Resources */ = {isa = PBXBuildFile; fileRef = CE0554F222CE351100A9D4F3 /* ball.gif */; };
+		CE0554F522CE382B00A9D4F3 /* juhua.gif in Resources */ = {isa = PBXBuildFile; fileRef = CE0554F422CE382A00A9D4F3 /* juhua.gif */; };
 		CE2E97852251E97B00EC8CD3 /* Alamofire-SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E97842251E97B00EC8CD3 /* Alamofire-SwiftyJSON.swift */; };
 		CE3D5EFA22C3D1FF00FE1F30 /* Image+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D5EF922C3D1FF00FE1F30 /* Image+Gif.swift */; };
-		CE3D5EFC22C3D7D000FE1F30 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = CE3D5EFB22C3D7D000FE1F30 /* loading.gif */; };
+		CE9261C322CD004900E8F6F3 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = CE9261C222CD004900E8F6F3 /* loading.gif */; };
+		CE9261C722CD009A00E8F6F3 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9261C522CD009A00E8F6F3 /* CustomViewController.swift */; };
+		CE9261C822CD009A00E8F6F3 /* CustomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9261C622CD009A00E8F6F3 /* CustomViewController.xib */; };
+		CE9261CB22CD063500E8F6F3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9261C922CD063500E8F6F3 /* BaseViewController.swift */; };
+		CE9261CC22CD063500E8F6F3 /* BaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9261CA22CD063500E8F6F3 /* BaseViewController.xib */; };
+		CE9261CE22CD0BC200E8F6F3 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9261CD22CD0BC200E8F6F3 /* UIColor+hex.swift */; };
+		CEC0070022DB93C4003AC089 /* UIImageView+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC006FF22DB93C4003AC089 /* UIImageView+URL.swift */; };
+		CEC0070222DBAADD003AC089 /* UIImage+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC0070122DBAADD003AC089 /* UIImage+Custom.swift */; };
 		CEC16B9522C746F800F90ADE /* AdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC16B9322C746F800F90ADE /* AdViewController.swift */; };
 		CEC16B9622C746F800F90ADE /* AdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC16B9422C746F800F90ADE /* AdViewController.xib */; };
 		CEC16BA022C7500A00F90ADE /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC16B9E22C7500A00F90ADE /* BaseNavigationViewController.swift */; };
@@ -51,9 +60,18 @@
 		36E8C550234172A5DB995921 /* Pods_diyplayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_diyplayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F42D2D9D83A5244D7EB58F /* Pods-diyplayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-diyplayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-diyplayer/Pods-diyplayer.release.xcconfig"; sourceTree = "<group>"; };
 		CBBEA0D969246F8C165F21D0 /* Pods-diyplayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-diyplayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-diyplayer/Pods-diyplayer.debug.xcconfig"; sourceTree = "<group>"; };
+		CE0554F222CE351100A9D4F3 /* ball.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ball.gif; sourceTree = "<group>"; };
+		CE0554F422CE382A00A9D4F3 /* juhua.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = juhua.gif; sourceTree = "<group>"; };
 		CE2E97842251E97B00EC8CD3 /* Alamofire-SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire-SwiftyJSON.swift"; sourceTree = "<group>"; };
 		CE3D5EF922C3D1FF00FE1F30 /* Image+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Gif.swift"; sourceTree = "<group>"; };
-		CE3D5EFB22C3D7D000FE1F30 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = loading.gif; path = ../../../../Downloads/loading.gif; sourceTree = "<group>"; };
+		CE9261C222CD004900E8F6F3 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
+		CE9261C522CD009A00E8F6F3 /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		CE9261C622CD009A00E8F6F3 /* CustomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomViewController.xib; sourceTree = "<group>"; };
+		CE9261C922CD063500E8F6F3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		CE9261CA22CD063500E8F6F3 /* BaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseViewController.xib; sourceTree = "<group>"; };
+		CE9261CD22CD0BC200E8F6F3 /* UIColor+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
+		CEC006FF22DB93C4003AC089 /* UIImageView+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+URL.swift"; sourceTree = "<group>"; };
+		CEC0070122DBAADD003AC089 /* UIImage+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Custom.swift"; sourceTree = "<group>"; };
 		CEC16B9322C746F800F90ADE /* AdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewController.swift; sourceTree = "<group>"; };
 		CEC16B9422C746F800F90ADE /* AdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdViewController.xib; sourceTree = "<group>"; };
 		CEC16B9E22C7500A00F90ADE /* BaseNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationViewController.swift; sourceTree = "<group>"; };
@@ -113,9 +131,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE9261C422CD007F00E8F6F3 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				CE9261C522CD009A00E8F6F3 /* CustomViewController.swift */,
+				CE9261C622CD009A00E8F6F3 /* CustomViewController.xib */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		CE9261D022CD0EB400E8F6F3 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
 		CEC16B9122C7469F00F90ADE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CE9261C422CD007F00E8F6F3 /* Custom */,
 				CEC16B9D22C74F8A00F90ADE /* Base */,
 				CEC16B9722C747B800F90ADE /* Play */,
 				CEC16BA222C7A8F500F90ADE /* Home */,
@@ -164,6 +199,8 @@
 			children = (
 				CEC16B9E22C7500A00F90ADE /* BaseNavigationViewController.swift */,
 				CEC16B9F22C7500A00F90ADE /* BaseNavigationViewController.xib */,
+				CE9261C922CD063500E8F6F3 /* BaseViewController.swift */,
+				CE9261CA22CD063500E8F6F3 /* BaseViewController.xib */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -202,14 +239,17 @@
 		E96DA14821319BC200752560 /* diyplayer */ = {
 			isa = PBXGroup;
 			children = (
+				CE9261D022CD0EB400E8F6F3 /* Constant */,
 				CEC16B9822C747D200F90ADE /* View */,
 				CEC16B9122C7469F00F90ADE /* Controller */,
 				E9F4373821344AB90011B517 /* Common */,
 				E96DA14921319BC200752560 /* AppDelegate.swift */,
+				CE0554F222CE351100A9D4F3 /* ball.gif */,
 				E96DA15021319BC200752560 /* Assets.xcassets */,
 				E9F437242131B76F0011B517 /* LaunchScreen.xib */,
 				E96DA15521319BC200752560 /* Info.plist */,
-				CE3D5EFB22C3D7D000FE1F30 /* loading.gif */,
+				CE0554F422CE382A00A9D4F3 /* juhua.gif */,
+				CE9261C222CD004900E8F6F3 /* loading.gif */,
 			);
 			path = diyplayer;
 			sourceTree = "<group>";
@@ -240,6 +280,9 @@
 				E9F4373B213580400011B517 /* TimeUtil.swift */,
 				E9F4373D213583B90011B517 /* Constants.swift */,
 				CE3D5EF922C3D1FF00FE1F30 /* Image+Gif.swift */,
+				CE9261CD22CD0BC200E8F6F3 /* UIColor+hex.swift */,
+				CEC006FF22DB93C4003AC089 /* UIImageView+URL.swift */,
+				CEC0070122DBAADD003AC089 /* UIImage+Custom.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -363,12 +406,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9F4372D2132A0F10011B517 /* DiyPlayerView.xib in Resources */,
+				CE9261CC22CD063500E8F6F3 /* BaseViewController.xib in Resources */,
 				CEC16B9622C746F800F90ADE /* AdViewController.xib in Resources */,
 				E9F437252131B76F0011B517 /* LaunchScreen.xib in Resources */,
+				CE0554F322CE351200A9D4F3 /* ball.gif in Resources */,
 				CEC16BA122C7500A00F90ADE /* BaseNavigationViewController.xib in Resources */,
+				CE0554F522CE382B00A9D4F3 /* juhua.gif in Resources */,
 				CEC16BA622C7A91F00F90ADE /* HomeViewController.xib in Resources */,
-				CE3D5EFC22C3D7D000FE1F30 /* loading.gif in Resources */,
+				CE9261C322CD004900E8F6F3 /* loading.gif in Resources */,
 				E96DA15121319BC200752560 /* Assets.xcassets in Resources */,
+				CE9261C822CD009A00E8F6F3 /* CustomViewController.xib in Resources */,
 				E9F437332132BBAB0011B517 /* PlayViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,11 +500,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9261CB22CD063500E8F6F3 /* BaseViewController.swift in Sources */,
 				CE2E97852251E97B00EC8CD3 /* Alamofire-SwiftyJSON.swift in Sources */,
 				E96DA14A21319BC200752560 /* AppDelegate.swift in Sources */,
 				E9F4372F2132A21D0011B517 /* DiyPlayerView.swift in Sources */,
+				CE9261C722CD009A00E8F6F3 /* CustomViewController.swift in Sources */,
+				CEC0070022DB93C4003AC089 /* UIImageView+URL.swift in Sources */,
+				CEC0070222DBAADD003AC089 /* UIImage+Custom.swift in Sources */,
 				CEC16BA022C7500A00F90ADE /* BaseNavigationViewController.swift in Sources */,
 				CEC16BA522C7A91F00F90ADE /* HomeViewController.swift in Sources */,
+				CE9261CE22CD0BC200E8F6F3 /* UIColor+hex.swift in Sources */,
 				E9F437322132BBAB0011B517 /* PlayViewController.swift in Sources */,
 				E9F4373C213580400011B517 /* TimeUtil.swift in Sources */,
 				E9F4373A21344ACA0011B517 /* CustomSlider.swift in Sources */,

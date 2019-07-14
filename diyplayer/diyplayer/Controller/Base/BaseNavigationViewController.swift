@@ -8,30 +8,30 @@
 
 import UIKit
 
-class BaseNavigationViewController: UINavigationController,UINavigationControllerDelegate {
+class BaseNavigationViewController: UINavigationController, UINavigationControllerDelegate {
     var popDelegate:UIGestureRecognizerDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
         //navigationBar字体颜色设置
-        navigationBar.isHidden = true
-        self.navigationBar.barTintColor = UIColor.green
-        self.navigationBar.tintColor = UIColor.green
-        //navigationBar字体颜色设置
-        self.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.green]
+        
+//        navigationBar字体颜色设置
+//        self.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.green]
         self.popDelegate = self.interactivePopGestureRecognizer?.delegate
         self.delegate = self
-        // Do any additional setup after loading the view.
+//         Do any additional setup after loading the view.
     }
 
     func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
-        //实现滑动返回的功能
-        //清空滑动返回手势的代理就可以实现
         if viewController == self.viewControllers[0] {
             self.interactivePopGestureRecognizer?.delegate = self.popDelegate
         } else {
             self.interactivePopGestureRecognizer?.delegate = nil;
         }
     }
+
+//    override func popViewController(animated: Bool) -> UIViewController? {
+//        
+//    }
     /*
     // MARK: - Navigation
 
