@@ -89,6 +89,7 @@ class HomeViewController: UIViewController {
             maker.height.equalTo(44)
         }
         
+        //头像
         let avatarImageView = UIImageView()
         avatarImageView.isUserInteractionEnabled = true
         navigationView.addSubview(avatarImageView)
@@ -105,6 +106,52 @@ class HomeViewController: UIViewController {
         let avatarUrl = "http://b-ssl.duitang.com/uploads/item/201809/24/20180924092018_zjgut.jpg"
         avatarImageView.loadFrom(link: avatarUrl, isCircle: true)
         navigationView.bringSubview(toFront: avatarImageView)
+        
+        //搜索框
+        let searchBoxView = UISearchBar()
+        navigationView.addSubview(searchBoxView)
+//        searchBoxView.isTranslucent = true
+        searchBoxView.backgroundImage = UIImage()
+        searchBoxView.barTintColor = UIColor.main
+        searchBoxView.tintColor = UIColor.main
+//        searchBoxView.searchBarStyle = .minimal
+        searchBoxView.searchTextPositionAdjustment = UIOffsetMake(0, 1)
+        let textField = searchBoxView.value(forKey: "searchField") as! UITextField
+        textField.layer.cornerRadius = 18
+        textField.layer.masksToBounds = true
+        textField.font = UIFont.systemFont(ofSize: 14)
+        textField.textColor = UIColor.lightGray
+        textField.tintColor = UIColor.main
+
+        searchBoxView.snp.makeConstraints { (maker) in
+            maker.leading.equalTo(avatarImageView.snp.trailing).offset(12)
+            maker.centerY.equalToSuperview()
+            maker.width.equalTo(260)
+        }
+        searchBoxView.frame.size.height = 20
+        var rect = searchBoxView.bounds
+        rect.size.height = 20
+        searchBoxView.bounds = rect
+        
+        //扫一扫和消息图标
+        let messageIconView = UIImageView()
+        messageIconView.image = UIImage(named: "message")
+        navigationView.addSubview(messageIconView)
+        messageIconView.snp.makeConstraints { (maker) in
+            maker.width.equalTo(27)
+            maker.height.equalTo(27)
+            maker.centerY.equalToSuperview()
+            maker.trailing.equalToSuperview().offset(-15)
+        }
+        let scanIconView = UIImageView()
+        scanIconView.image = UIImage(named: "scan")
+        navigationView.addSubview(scanIconView)
+        scanIconView.snp.makeConstraints { (maker) in
+            maker.width.equalTo(22)
+            maker.height.equalTo(22)
+            maker.centerY.equalToSuperview()
+            maker.trailing.equalTo(messageIconView.snp.leading).offset(-20)
+        }
         
     }
 
