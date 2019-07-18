@@ -9,8 +9,12 @@
 import UIKit
 import SnapKit
 
-class HomeViewController: UIViewController {
-
+class HomeViewController: UIViewController, UISearchBarDelegate {
+    
+    let navigationView = UIView()
+    let avatarImageView = UIImageView()
+    let searchBoxView = UISearchBar()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        navigationController?.isNavigationBarHidden = false
@@ -68,6 +72,19 @@ class HomeViewController: UIViewController {
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }
     
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        print("clicked")
+        searchBoxView.endEditing(true)
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        print("begin edit")
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        print("end edit")
+    }
+    
     func setNavigation() {
         let statusView = UIView()
         self.view.addSubview(statusView)
@@ -79,7 +96,6 @@ class HomeViewController: UIViewController {
             maker.height.equalTo(44)
         }
         
-        let navigationView = UIView()
         self.view.addSubview(navigationView)
         navigationView.backgroundColor = UIColor.main
         navigationView.snp.makeConstraints { (maker) in
@@ -90,7 +106,6 @@ class HomeViewController: UIViewController {
         }
         
         //头像
-        let avatarImageView = UIImageView()
         avatarImageView.isUserInteractionEnabled = true
         navigationView.addSubview(avatarImageView)
         avatarImageView.snp.makeConstraints { (maker) in
@@ -107,39 +122,15 @@ class HomeViewController: UIViewController {
         avatarImageView.loadFrom(link: avatarUrl, isCircle: true)
         navigationView.bringSubview(toFront: avatarImageView)
         
-        //搜索框
-        let searchBoxView = UISearchBar()
-        navigationView.addSubview(searchBoxView)
-//        searchBoxView.isTranslucent = true
-        searchBoxView.backgroundImage = UIImage()
-        searchBoxView.barTintColor = UIColor.main
-        searchBoxView.tintColor = UIColor.main
-//        searchBoxView.searchBarStyle = .minimal
-        searchBoxView.searchTextPositionAdjustment = UIOffsetMake(0, 1)
-        let textField = searchBoxView.value(forKey: "searchField") as! UITextField
-        textField.layer.cornerRadius = 18
-        textField.layer.masksToBounds = true
-        textField.font = UIFont.systemFont(ofSize: 14)
-        textField.textColor = UIColor.lightGray
-        textField.tintColor = UIColor.main
-
-        searchBoxView.snp.makeConstraints { (maker) in
-            maker.leading.equalTo(avatarImageView.snp.trailing).offset(12)
-            maker.centerY.equalToSuperview()
-            maker.width.equalTo(260)
-        }
-        searchBoxView.frame.size.height = 20
-        var rect = searchBoxView.bounds
-        rect.size.height = 20
-        searchBoxView.bounds = rect
+        setSearchBar()
         
         //扫一扫和消息图标
         let messageIconView = UIImageView()
         messageIconView.image = UIImage(named: "message")
         navigationView.addSubview(messageIconView)
         messageIconView.snp.makeConstraints { (maker) in
-            maker.width.equalTo(27)
-            maker.height.equalTo(27)
+            maker.width.equalTo(25)
+            maker.height.equalTo(25)
             maker.centerY.equalToSuperview()
             maker.trailing.equalToSuperview().offset(-15)
         }
@@ -147,12 +138,48 @@ class HomeViewController: UIViewController {
         scanIconView.image = UIImage(named: "scan")
         navigationView.addSubview(scanIconView)
         scanIconView.snp.makeConstraints { (maker) in
-            maker.width.equalTo(22)
-            maker.height.equalTo(22)
+            maker.width.equalTo(20)
+            maker.height.equalTo(20)
             maker.centerY.equalToSuperview()
             maker.trailing.equalTo(messageIconView.snp.leading).offset(-20)
         }
-        
     }
-
+    
+    func setSearchBar() {
+        //搜索框
+        let searchBoxBgView = UIImageView()
+        let insets = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
+        // 用圆形图片左右拉伸成搜索框图形作为背景图
+        searchBoxBgView.image = UIImage(named: "circle_white")?.resizableImage(withCapInsets: insets)
+        navigationView.addSubview(searchBoxBgView)
+        searchBoxBgView.snp.makeConstraints { (maker) in
+            maker.leading.equalTo(avatarImageView.snp.trailing).offset(15)
+            maker.centerY.equalToSuperview()
+            maker.width.equalTo(250)
+            maker.height.equalTo(30)
+        }
+        
+        searchBoxView.delegate = self
+        navigationView.addSubview(searchBoxView)
+//        searchBoxView.isTranslucent = true
+        searchBoxView.barTintColor = UIColor.clear
+        searchBoxView.tintColor = UIColor.main
+        //searchBoxView.searchBarStyle = .minimal
+        searchBoxView.searchTextPositionAdjustment = UIOffsetMake(8, 1)
+        let textField = searchBoxView.value(forKey: "searchField") as! UITextField
+        textField.layer.cornerRadius = 18
+        textField.layer.masksToBounds = true
+        textField.borderStyle = .none
+        textField.font = UIFont.systemFont(ofSize: 14)
+        textField.textColor = UIColor.lightGray
+        textField.tintColor = UIColor.main
+        textField.backgroundColor = UIColor.clear
+        searchBoxView.backgroundImage = UIImage()
+        searchBoxView.snp.makeConstraints { (maker) in
+            maker.leading.equalTo(avatarImageView.snp.trailing).offset(12)
+            maker.centerY.equalToSuperview()
+            maker.width.equalTo(260)
+            maker.height.equalTo(30)
+        }
+    }
 }
