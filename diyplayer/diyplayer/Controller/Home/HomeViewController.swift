@@ -174,6 +174,8 @@ class HomeViewController: UIViewController, UISearchBarDelegate {
         textField.textColor = UIColor.lightGray
         textField.tintColor = UIColor.main
         textField.backgroundColor = UIColor.clear
+        textField.placeholder = "搜索"
+        textField.enablesReturnKeyAutomatically = false //text为空时return key依然可用
         searchBoxView.backgroundImage = UIImage()
         searchBoxView.snp.makeConstraints { (maker) in
             maker.leading.equalTo(avatarImageView.snp.trailing).offset(12)

@@ -30,7 +30,7 @@ class AdViewController: UIViewController {
     
     @objc func switchDidChange(){
         if (self.switchButton.isOn) {
-            self.navigationController?.pushViewController(HomeViewController(), animated: true)
+            self.navigationController?.pushViewController(TabBarViewController(), animated: true)
         }
     }
     
