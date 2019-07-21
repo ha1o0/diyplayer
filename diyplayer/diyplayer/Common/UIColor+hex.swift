@@ -53,9 +53,9 @@ extension UIColor {
         return colorWithHexString("#FF6E82")
     }
     
-    /// #333333
-    static var gray1: UIColor {
-        return colorWithHexString("#333333")
+    /// #8a8a8a
+    static var tabBarGray: UIColor {
+        return colorWithHexString("#8a8a8a")
     }
 
     /// #dddddd

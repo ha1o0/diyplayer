@@ -12,9 +12,6 @@ class BaseNavigationViewController: UINavigationController, UINavigationControll
     var popDelegate:UIGestureRecognizerDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
-        //navigationBar字体颜色设置
-        
-//        navigationBar字体颜色设置
 //        self.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.green]
         self.popDelegate = self.interactivePopGestureRecognizer?.delegate
         self.delegate = self
