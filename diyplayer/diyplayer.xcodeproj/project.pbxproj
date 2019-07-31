@@ -29,6 +29,7 @@
 		CEC16BA122C7500A00F90ADE /* BaseNavigationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC16B9F22C7500A00F90ADE /* BaseNavigationViewController.xib */; };
 		CEC16BA522C7A91F00F90ADE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC16BA322C7A91F00F90ADE /* HomeViewController.swift */; };
 		CEC16BA622C7A91F00F90ADE /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC16BA422C7A91F00F90ADE /* HomeViewController.xib */; };
+		CEDA1C6C22F1FAA300FA6365 /* Pods_diyplayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA1C6B22F1FAA300FA6365 /* Pods_diyplayer.framework */; };
 		E96DA14A21319BC200752560 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DA14921319BC200752560 /* AppDelegate.swift */; };
 		E96DA15121319BC200752560 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E96DA15021319BC200752560 /* Assets.xcassets */; };
 		E96DA15F21319BC200752560 /* diyplayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DA15E21319BC200752560 /* diyplayerTests.swift */; };
@@ -86,6 +87,7 @@
 		CEC16B9F22C7500A00F90ADE /* BaseNavigationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseNavigationViewController.xib; sourceTree = "<group>"; };
 		CEC16BA322C7A91F00F90ADE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CEC16BA422C7A91F00F90ADE /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		CEDA1C6B22F1FAA300FA6365 /* Pods_diyplayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_diyplayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E96DA14621319BC200752560 /* diyplayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = diyplayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E96DA14921319BC200752560 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E96DA15021319BC200752560 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEDA1C6C22F1FAA300FA6365 /* Pods_diyplayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +137,7 @@
 		3011A03BC25795C67ED6F2CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CEDA1C6B22F1FAA300FA6365 /* Pods_diyplayer.framework */,
 				36E8C550234172A5DB995921 /* Pods_diyplayer.framework */,
 			);
 			name = Frameworks;
@@ -146,13 +150,6 @@
 				CE9261C622CD009A00E8F6F3 /* CustomViewController.xib */,
 			);
 			path = Custom;
-			sourceTree = "<group>";
-		};
-		CE9261D022CD0EB400E8F6F3 /* Constant */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Constant;
 			sourceTree = "<group>";
 		};
 		CEBD2DBB22E4AA6C00067B4A /* TabBar */ = {
@@ -198,6 +195,7 @@
 		CEC16B9822C747D200F90ADE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E9F4373921344ACA0011B517 /* CustomSlider.swift */,
 				CEC16B9922C747E300F90ADE /* player */,
 			);
 			path = View;
@@ -234,6 +232,33 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		CEDA1C6D22F1FB6400FA6365 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CE2E97842251E97B00EC8CD3 /* Alamofire-SwiftyJSON.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CEDA1C6E22F1FB6B00FA6365 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CE3D5EF922C3D1FF00FE1F30 /* Image+Gif.swift */,
+				CE9261CD22CD0BC200E8F6F3 /* UIColor+hex.swift */,
+				CEC006FF22DB93C4003AC089 /* UIImageView+URL.swift */,
+				CEC0070122DBAADD003AC089 /* UIImage+Custom.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		CEDA1C6F22F1FB7500FA6365 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				E9F4373B213580400011B517 /* TimeUtil.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		E96DA13D21319BC200752560 = {
 			isa = PBXGroup;
 			children = (
@@ -259,7 +284,9 @@
 		E96DA14821319BC200752560 /* diyplayer */ = {
 			isa = PBXGroup;
 			children = (
-				CE9261D022CD0EB400E8F6F3 /* Constant */,
+				CEDA1C6F22F1FB7500FA6365 /* Util */,
+				CEDA1C6E22F1FB6B00FA6365 /* Extension */,
+				CEDA1C6D22F1FB6400FA6365 /* Network */,
 				CEC16B9822C747D200F90ADE /* View */,
 				CEC16B9122C7469F00F90ADE /* Controller */,
 				E9F4373821344AB90011B517 /* Common */,
@@ -295,14 +322,7 @@
 		E9F4373821344AB90011B517 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				CE2E97842251E97B00EC8CD3 /* Alamofire-SwiftyJSON.swift */,
-				E9F4373921344ACA0011B517 /* CustomSlider.swift */,
-				E9F4373B213580400011B517 /* TimeUtil.swift */,
 				E9F4373D213583B90011B517 /* Constants.swift */,
-				CE3D5EF922C3D1FF00FE1F30 /* Image+Gif.swift */,
-				CE9261CD22CD0BC200E8F6F3 /* UIColor+hex.swift */,
-				CEC006FF22DB93C4003AC089 /* UIImageView+URL.swift */,
-				CEC0070122DBAADD003AC089 /* UIImage+Custom.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -690,6 +710,20 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WZMD84KKFL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire-SwiftyJSON\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Charts\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/DLRadioButton\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Kingfisher\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Moya\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ObjectMapper\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Result\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftyJSON\"",
+				);
 				INFOPLIST_FILE = diyplayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = win.iword.app.diyplayer;
