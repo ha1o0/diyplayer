@@ -1,4 +1,4 @@
-framework module DLRadioButton {
+module DLRadioButton {
   umbrella header "DLRadioButton-umbrella.h"
 
   export *
