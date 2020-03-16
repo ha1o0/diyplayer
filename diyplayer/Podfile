@@ -1,11 +1,13 @@
-source 'https://github.com/CocoaPods/Specs.git'
+#source 'https://github.com/CocoaPods/Specs.git'
+source 'https://cdn.cocoapods.org/'
 platform :ios, '10.0'
-use_frameworks!
+#use_frameworks!
+use_modular_headers!
 inhibit_all_warnings!
 
-target ‘diyplayer’ do
+target 'diyplayer' do
     # pod swift
-    pod 'Moya', '9.0.0'
+    pod 'Moya', '~>11.0'
     pod 'ObjectMapper', '~>3.3'
     pod 'Kingfisher', '4.1.0'
     pod 'SnapKit', '4.0.0'
@@ -14,5 +16,6 @@ target ‘diyplayer’ do
     pod 'SwiftyJSON', '~> 4.0'
     pod 'Alamofire-SwiftyJSON'
     # pod objective-c
-    pod 'MBProgressHUD', '1.0.0'
+    pod 'MBProgressHUD'
 end
+	

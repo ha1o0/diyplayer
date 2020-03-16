@@ -17,6 +17,13 @@
 		CE9261CB22CD063500E8F6F3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9261C922CD063500E8F6F3 /* BaseViewController.swift */; };
 		CE9261CC22CD063500E8F6F3 /* BaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9261CA22CD063500E8F6F3 /* BaseViewController.xib */; };
 		CE9261CE22CD0BC200E8F6F3 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9261CD22CD0BC200E8F6F3 /* UIColor+hex.swift */; };
+		CEA1B476230D8F8A00385E19 /* DMAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1B474230D8F8A00385E19 /* DMAPI.swift */; };
+		CEA1B477230D8F8A00385E19 /* DMModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1B475230D8F8A00385E19 /* DMModel.swift */; };
+		CEA1B479230D8F9800385E19 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1B478230D8F9800385E19 /* HttpRequest.swift */; };
+		CEA1B47D230D8FA800385E19 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1B47A230D8FA800385E19 /* HUD.swift */; };
+		CEA1B47E230D8FA800385E19 /* SaveFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1B47B230D8FA800385E19 /* SaveFiles.swift */; };
+		CEA1B47F230D8FA800385E19 /* StrInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1B47C230D8FA800385E19 /* StrInt.swift */; };
+		CEA1B481230D8FB100385E19 /* MoyaConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1B480230D8FB100385E19 /* MoyaConfig.swift */; };
 		CEBD2DBE22E4AA9A00067B4A /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD2DBC22E4AA9A00067B4A /* TabBarViewController.swift */; };
 		CEBD2DBF22E4AA9A00067B4A /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEBD2DBD22E4AA9A00067B4A /* TabBarViewController.xib */; };
 		CEBD2DC322E4BF2B00067B4A /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD2DC122E4BF2B00067B4A /* ChannelViewController.swift */; };
@@ -29,11 +36,17 @@
 		CEC16BA122C7500A00F90ADE /* BaseNavigationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC16B9F22C7500A00F90ADE /* BaseNavigationViewController.xib */; };
 		CEC16BA522C7A91F00F90ADE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC16BA322C7A91F00F90ADE /* HomeViewController.swift */; };
 		CEC16BA622C7A91F00F90ADE /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC16BA422C7A91F00F90ADE /* HomeViewController.xib */; };
-		CEDA1C6C22F1FAA300FA6365 /* Pods_diyplayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDA1C6B22F1FAA300FA6365 /* Pods_diyplayer.framework */; };
 		E96DA14A21319BC200752560 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DA14921319BC200752560 /* AppDelegate.swift */; };
 		E96DA15121319BC200752560 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E96DA15021319BC200752560 /* Assets.xcassets */; };
 		E96DA15F21319BC200752560 /* diyplayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DA15E21319BC200752560 /* diyplayerTests.swift */; };
 		E96DA16A21319BC200752560 /* diyplayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DA16921319BC200752560 /* diyplayerUITests.swift */; };
+		E9CBF57A23B3A2FF00C157C1 /* ScrollTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CBF57823B3A2FF00C157C1 /* ScrollTabViewController.swift */; };
+		E9CBF57B23B3A2FF00C157C1 /* ScrollTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9CBF57923B3A2FF00C157C1 /* ScrollTabViewController.xib */; };
+		E9EA4421239BFB6F0022DD00 /* CircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EA441F239BFB6F0022DD00 /* CircleViewController.swift */; };
+		E9EA4422239BFB6F0022DD00 /* CircleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9EA4420239BFB6F0022DD00 /* CircleViewController.xib */; };
+		E9EA4425239BFE1D0022DD00 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EA4423239BFE1D0022DD00 /* ProfileViewController.swift */; };
+		E9EA4426239BFE1D0022DD00 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9EA4424239BFE1D0022DD00 /* ProfileViewController.xib */; };
+		E9EA442A239C15280022DD00 /* ScrollTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EA4429239C15280022DD00 /* ScrollTabView.swift */; };
 		E9F437252131B76F0011B517 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9F437242131B76F0011B517 /* LaunchScreen.xib */; };
 		E9F4372D2132A0F10011B517 /* DiyPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9F4372C2132A0F10011B517 /* DiyPlayerView.xib */; };
 		E9F4372F2132A21D0011B517 /* DiyPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F4372E2132A21D0011B517 /* DiyPlayerView.swift */; };
@@ -42,6 +55,7 @@
 		E9F4373A21344ACA0011B517 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F4373921344ACA0011B517 /* CustomSlider.swift */; };
 		E9F4373C213580400011B517 /* TimeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F4373B213580400011B517 /* TimeUtil.swift */; };
 		E9F4373E213583B90011B517 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F4373D213583B90011B517 /* Constants.swift */; };
+		F8BA720F1C55094BCAEA6E42 /* libPods-diyplayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28870703B326B26277E559F7 /* libPods-diyplayer.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +76,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		36E8C550234172A5DB995921 /* Pods_diyplayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_diyplayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		28870703B326B26277E559F7 /* libPods-diyplayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-diyplayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F42D2D9D83A5244D7EB58F /* Pods-diyplayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-diyplayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-diyplayer/Pods-diyplayer.release.xcconfig"; sourceTree = "<group>"; };
 		CBBEA0D969246F8C165F21D0 /* Pods-diyplayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-diyplayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-diyplayer/Pods-diyplayer.debug.xcconfig"; sourceTree = "<group>"; };
 		CE0554F222CE351100A9D4F3 /* ball.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ball.gif; sourceTree = "<group>"; };
@@ -75,6 +89,13 @@
 		CE9261C922CD063500E8F6F3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		CE9261CA22CD063500E8F6F3 /* BaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseViewController.xib; sourceTree = "<group>"; };
 		CE9261CD22CD0BC200E8F6F3 /* UIColor+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
+		CEA1B474230D8F8A00385E19 /* DMAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMAPI.swift; sourceTree = "<group>"; };
+		CEA1B475230D8F8A00385E19 /* DMModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMModel.swift; sourceTree = "<group>"; };
+		CEA1B478230D8F9800385E19 /* HttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
+		CEA1B47A230D8FA800385E19 /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
+		CEA1B47B230D8FA800385E19 /* SaveFiles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveFiles.swift; sourceTree = "<group>"; };
+		CEA1B47C230D8FA800385E19 /* StrInt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrInt.swift; sourceTree = "<group>"; };
+		CEA1B480230D8FB100385E19 /* MoyaConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoyaConfig.swift; sourceTree = "<group>"; };
 		CEBD2DBC22E4AA9A00067B4A /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		CEBD2DBD22E4AA9A00067B4A /* TabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
 		CEBD2DC122E4BF2B00067B4A /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
@@ -87,7 +108,17 @@
 		CEC16B9F22C7500A00F90ADE /* BaseNavigationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseNavigationViewController.xib; sourceTree = "<group>"; };
 		CEC16BA322C7A91F00F90ADE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CEC16BA422C7A91F00F90ADE /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		CEDA1C6B22F1FAA300FA6365 /* Pods_diyplayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_diyplayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E91525C723F12FAE00B22D49 /* Alamofire_SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire_SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E91525C823F12FAE00B22D49 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E91525C923F12FAE00B22D49 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E91525CA23F12FAE00B22D49 /* DLRadioButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DLRadioButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E91525CB23F12FAE00B22D49 /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E91525CC23F12FAE00B22D49 /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E91525CD23F12FAE00B22D49 /* Moya.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Moya.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E91525CE23F12FAE00B22D49 /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E91525CF23F12FAE00B22D49 /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E91525D023F12FAE00B22D49 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E91525D123F12FAE00B22D49 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E96DA14621319BC200752560 /* diyplayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = diyplayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E96DA14921319BC200752560 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E96DA15021319BC200752560 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -98,6 +129,13 @@
 		E96DA16521319BC200752560 /* diyplayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = diyplayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E96DA16921319BC200752560 /* diyplayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diyplayerUITests.swift; sourceTree = "<group>"; };
 		E96DA16B21319BC200752560 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9CBF57823B3A2FF00C157C1 /* ScrollTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollTabViewController.swift; sourceTree = "<group>"; };
+		E9CBF57923B3A2FF00C157C1 /* ScrollTabViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScrollTabViewController.xib; sourceTree = "<group>"; };
+		E9EA441F239BFB6F0022DD00 /* CircleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewController.swift; sourceTree = "<group>"; };
+		E9EA4420239BFB6F0022DD00 /* CircleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CircleViewController.xib; sourceTree = "<group>"; };
+		E9EA4423239BFE1D0022DD00 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		E9EA4424239BFE1D0022DD00 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		E9EA4429239C15280022DD00 /* ScrollTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollTabView.swift; sourceTree = "<group>"; };
 		E9F437242131B76F0011B517 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		E9F4372C2132A0F10011B517 /* DiyPlayerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiyPlayerView.xib; sourceTree = "<group>"; };
 		E9F4372E2132A21D0011B517 /* DiyPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiyPlayerView.swift; sourceTree = "<group>"; };
@@ -113,7 +151,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEDA1C6C22F1FAA300FA6365 /* Pods_diyplayer.framework in Frameworks */,
+				F8BA720F1C55094BCAEA6E42 /* libPods-diyplayer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +175,18 @@
 		3011A03BC25795C67ED6F2CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CEDA1C6B22F1FAA300FA6365 /* Pods_diyplayer.framework */,
-				36E8C550234172A5DB995921 /* Pods_diyplayer.framework */,
+				E91525C723F12FAE00B22D49 /* Alamofire_SwiftyJSON.framework */,
+				E91525C823F12FAE00B22D49 /* Alamofire.framework */,
+				E91525C923F12FAE00B22D49 /* Charts.framework */,
+				E91525CA23F12FAE00B22D49 /* DLRadioButton.framework */,
+				E91525CB23F12FAE00B22D49 /* Kingfisher.framework */,
+				E91525CC23F12FAE00B22D49 /* MBProgressHUD.framework */,
+				E91525CD23F12FAE00B22D49 /* Moya.framework */,
+				E91525CE23F12FAE00B22D49 /* ObjectMapper.framework */,
+				E91525CF23F12FAE00B22D49 /* Result.framework */,
+				E91525D023F12FAE00B22D49 /* SnapKit.framework */,
+				E91525D123F12FAE00B22D49 /* SwiftyJSON.framework */,
+				28870703B326B26277E559F7 /* libPods-diyplayer.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -152,11 +200,24 @@
 			path = Custom;
 			sourceTree = "<group>";
 		};
+		CEA1B473230D8E9800385E19 /* Moya */ = {
+			isa = PBXGroup;
+			children = (
+				CEA1B474230D8F8A00385E19 /* DMAPI.swift */,
+				CEA1B475230D8F8A00385E19 /* DMModel.swift */,
+				CEA1B478230D8F9800385E19 /* HttpRequest.swift */,
+				CEA1B480230D8FB100385E19 /* MoyaConfig.swift */,
+			);
+			path = Moya;
+			sourceTree = "<group>";
+		};
 		CEBD2DBB22E4AA6C00067B4A /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
 				CEBD2DBC22E4AA9A00067B4A /* TabBarViewController.swift */,
 				CEBD2DBD22E4AA9A00067B4A /* TabBarViewController.xib */,
+				E9CBF57823B3A2FF00C157C1 /* ScrollTabViewController.swift */,
+				E9CBF57923B3A2FF00C157C1 /* ScrollTabViewController.xib */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -164,6 +225,9 @@
 		CEC16B9122C7469F00F90ADE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E9C305C923A29083001CA470 /* Channel */,
+				E9C305C823A2905A001CA470 /* Mine */,
+				E9C305C723A29036001CA470 /* Circle */,
 				CEBD2DBB22E4AA6C00067B4A /* TabBar */,
 				CE9261C422CD007F00E8F6F3 /* Custom */,
 				CEC16B9D22C74F8A00F90ADE /* Base */,
@@ -196,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				E9F4373921344ACA0011B517 /* CustomSlider.swift */,
+				E9EA4429239C15280022DD00 /* ScrollTabView.swift */,
 				CEC16B9922C747E300F90ADE /* player */,
 			);
 			path = View;
@@ -226,8 +291,6 @@
 			children = (
 				CEC16BA322C7A91F00F90ADE /* HomeViewController.swift */,
 				CEC16BA422C7A91F00F90ADE /* HomeViewController.xib */,
-				CEBD2DC122E4BF2B00067B4A /* ChannelViewController.swift */,
-				CEBD2DC222E4BF2B00067B4A /* ChannelViewController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -235,6 +298,7 @@
 		CEDA1C6D22F1FB6400FA6365 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				CEA1B473230D8E9800385E19 /* Moya */,
 				CE2E97842251E97B00EC8CD3 /* Alamofire-SwiftyJSON.swift */,
 			);
 			path = Network;
@@ -319,10 +383,40 @@
 			path = diyplayerUITests;
 			sourceTree = "<group>";
 		};
+		E9C305C723A29036001CA470 /* Circle */ = {
+			isa = PBXGroup;
+			children = (
+				E9EA441F239BFB6F0022DD00 /* CircleViewController.swift */,
+				E9EA4420239BFB6F0022DD00 /* CircleViewController.xib */,
+			);
+			path = Circle;
+			sourceTree = "<group>";
+		};
+		E9C305C823A2905A001CA470 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				E9EA4423239BFE1D0022DD00 /* ProfileViewController.swift */,
+				E9EA4424239BFE1D0022DD00 /* ProfileViewController.xib */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		E9C305C923A29083001CA470 /* Channel */ = {
+			isa = PBXGroup;
+			children = (
+				CEBD2DC122E4BF2B00067B4A /* ChannelViewController.swift */,
+				CEBD2DC222E4BF2B00067B4A /* ChannelViewController.xib */,
+			);
+			path = Channel;
+			sourceTree = "<group>";
+		};
 		E9F4373821344AB90011B517 /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				E9F4373D213583B90011B517 /* Constants.swift */,
+				CEA1B47A230D8FA800385E19 /* HUD.swift */,
+				CEA1B47B230D8FA800385E19 /* SaveFiles.swift */,
+				CEA1B47C230D8FA800385E19 /* StrInt.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -347,7 +441,6 @@
 				E96DA14221319BC200752560 /* Sources */,
 				E96DA14321319BC200752560 /* Frameworks */,
 				E96DA14421319BC200752560 /* Resources */,
-				5F82D5DB9476CB9718DF2352 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -454,7 +547,10 @@
 				CEBD2DC422E4BF2B00067B4A /* ChannelViewController.xib in Resources */,
 				CE0554F522CE382B00A9D4F3 /* juhua.gif in Resources */,
 				CEC16BA622C7A91F00F90ADE /* HomeViewController.xib in Resources */,
+				E9CBF57B23B3A2FF00C157C1 /* ScrollTabViewController.xib in Resources */,
 				CE9261C322CD004900E8F6F3 /* loading.gif in Resources */,
+				E9EA4426239BFE1D0022DD00 /* ProfileViewController.xib in Resources */,
+				E9EA4422239BFB6F0022DD00 /* CircleViewController.xib in Resources */,
 				E96DA15121319BC200752560 /* Assets.xcassets in Resources */,
 				CE9261C822CD009A00E8F6F3 /* CustomViewController.xib in Resources */,
 				E9F437332132BBAB0011B517 /* PlayViewController.xib in Resources */,
@@ -479,44 +575,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5F82D5DB9476CB9718DF2352 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-diyplayer/Pods-diyplayer-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Alamofire-SwiftyJSON/Alamofire_SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
-				"${BUILT_PRODUCTS_DIR}/DLRadioButton/DLRadioButton.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire_SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLRadioButton.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-diyplayer/Pods-diyplayer-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		8FB1B14FD06CD4D19CEBC4BE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -542,13 +600,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA1B481230D8FB100385E19 /* MoyaConfig.swift in Sources */,
 				CE9261CB22CD063500E8F6F3 /* BaseViewController.swift in Sources */,
+				CEA1B476230D8F8A00385E19 /* DMAPI.swift in Sources */,
+				CEA1B477230D8F8A00385E19 /* DMModel.swift in Sources */,
 				CE2E97852251E97B00EC8CD3 /* Alamofire-SwiftyJSON.swift in Sources */,
 				E96DA14A21319BC200752560 /* AppDelegate.swift in Sources */,
+				E9EA4425239BFE1D0022DD00 /* ProfileViewController.swift in Sources */,
+				E9EA442A239C15280022DD00 /* ScrollTabView.swift in Sources */,
+				CEA1B479230D8F9800385E19 /* HttpRequest.swift in Sources */,
 				E9F4372F2132A21D0011B517 /* DiyPlayerView.swift in Sources */,
 				CE9261C722CD009A00E8F6F3 /* CustomViewController.swift in Sources */,
 				CEC0070022DB93C4003AC089 /* UIImageView+URL.swift in Sources */,
+				CEA1B47E230D8FA800385E19 /* SaveFiles.swift in Sources */,
 				CEC0070222DBAADD003AC089 /* UIImage+Custom.swift in Sources */,
+				E9EA4421239BFB6F0022DD00 /* CircleViewController.swift in Sources */,
+				CEA1B47F230D8FA800385E19 /* StrInt.swift in Sources */,
 				CEC16BA022C7500A00F90ADE /* BaseNavigationViewController.swift in Sources */,
 				CEC16BA522C7A91F00F90ADE /* HomeViewController.swift in Sources */,
 				CEBD2DBE22E4AA9A00067B4A /* TabBarViewController.swift in Sources */,
@@ -556,6 +623,8 @@
 				CE9261CE22CD0BC200E8F6F3 /* UIColor+hex.swift in Sources */,
 				E9F437322132BBAB0011B517 /* PlayViewController.swift in Sources */,
 				E9F4373C213580400011B517 /* TimeUtil.swift in Sources */,
+				CEA1B47D230D8FA800385E19 /* HUD.swift in Sources */,
+				E9CBF57A23B3A2FF00C157C1 /* ScrollTabViewController.swift in Sources */,
 				E9F4373A21344ACA0011B517 /* CustomSlider.swift in Sources */,
 				CEC16B9522C746F800F90ADE /* AdViewController.swift in Sources */,
 				E9F4373E213583B90011B517 /* Constants.swift in Sources */,
@@ -729,7 +798,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = win.iword.app.diyplayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -746,7 +815,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = win.iword.app.diyplayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

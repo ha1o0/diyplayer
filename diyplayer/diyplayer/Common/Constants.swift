@@ -7,5 +7,8 @@
 //
 
 import Foundation
+import UIKit
 
 let SECONDS_PER_MINUTE = 60
+let SCREEN_WIDTH = UIScreen.main.bounds.width
+let SCREEN_HEIGHT = UIScreen.main.bounds.height

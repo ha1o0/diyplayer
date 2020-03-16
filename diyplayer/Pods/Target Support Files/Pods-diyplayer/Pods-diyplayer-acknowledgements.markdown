@@ -307,7 +307,7 @@ SOFTWARE.
 
 ## MBProgressHUD
 
-Copyright © 2009-2016 Matej Bukovinski
+Copyright © 2009-2020 Matej Bukovinski
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -331,7 +331,7 @@ THE SOFTWARE.
 
 The MIT License (MIT)
 
-Copyright (c) 2017 Artsy, Ash Furrow
+Copyright (c) 2014-present Artsy, Ash Furrow
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

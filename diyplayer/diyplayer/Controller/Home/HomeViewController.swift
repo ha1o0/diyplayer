@@ -19,27 +19,30 @@ class HomeViewController: UIViewController, UISearchBarDelegate {
         super.viewDidLoad()
 //        navigationController?.isNavigationBarHidden = false
         setNavigation()
-        let jumpBtn = UIButton()
-        jumpBtn.setTitle("进入视频播放页", for: .normal)
-        jumpBtn.setTitleColor(UIColor.black, for: .normal)
-        jumpBtn.setTitleColor(UIColor.blue, for: .highlighted)
-        jumpBtn.addTarget(self, action: #selector(toPlayView), for: .touchUpInside)
-        self.view.addSubview(jumpBtn)
-        jumpBtn.snp.makeConstraints { (maker) in
-            maker.centerX.equalTo(self.view)
-            maker.top.equalTo(self.view).offset(200)
-        }
+        setScrollTab()
         
-        let jumpBtn1 = UIButton()
-        jumpBtn1.setTitle("进入普通页", for: .normal)
-        jumpBtn1.setTitleColor(UIColor.black, for: .normal)
-        jumpBtn1.setTitleColor(UIColor.blue, for: .highlighted)
-        jumpBtn1.addTarget(self, action: #selector(toCustomView), for: .touchUpInside)
-        self.view.addSubview(jumpBtn1)
-        jumpBtn1.snp.makeConstraints { (maker) in
-            maker.centerX.equalTo(self.view)
-            maker.top.equalTo(self.view).offset(300)
-        }
+//        let jumpBtn = UIButton()
+//        jumpBtn.setTitle("进入视频播放页", for: .normal)
+//        jumpBtn.setTitleColor(UIColor.black, for: .normal)
+//        jumpBtn.setTitleColor(UIColor.blue, for: .highlighted)
+//        jumpBtn.addTarget(self, action: #selector(toPlayView), for: .touchUpInside)
+//        self.view.addSubview(jumpBtn)
+//        jumpBtn.snp.makeConstraints { (maker) in
+//            maker.centerX.equalTo(self.view)
+//            maker.top.equalTo(self.view).offset(200)
+//        }
+//
+//        let jumpBtn1 = UIButton()
+//        jumpBtn1.setTitle("进入普通页", for: .normal)
+//        jumpBtn1.setTitleColor(UIColor.black, for: .normal)
+//        jumpBtn1.setTitleColor(UIColor.blue, for: .highlighted)
+//        jumpBtn1.addTarget(self, action: #selector(toCustomView), for: .touchUpInside)
+//        self.view.addSubview(jumpBtn1)
+//        jumpBtn1.snp.makeConstraints { (maker) in
+//            maker.centerX.equalTo(self.view)
+//            maker.top.equalTo(self.view).offset(300)
+//        }
+        
         // Do any additional setup after loading the view.
     }
 
@@ -183,5 +186,20 @@ class HomeViewController: UIViewController, UISearchBarDelegate {
             maker.width.equalTo(260)
             maker.height.equalTo(30)
         }
+    }
+    
+    func setScrollTab() {
+        let scrollTab = ScrollTabView()
+        scrollTab.hasBottomLine = true
+        scrollTab.tabTitles = ["直播", "推荐", "热门", "追番", "影视", "70年"]
+        scrollTab.setUpView()
+        self.view.addSubview(scrollTab)
+        scrollTab.snp_makeConstraints { (maker) in
+            maker.leading.equalToSuperview()
+            maker.trailing.equalToSuperview()
+            maker.top.equalTo(self.navigationView.snp_bottom)
+            maker.height.equalTo(50)
+        }
+        
     }
 }
