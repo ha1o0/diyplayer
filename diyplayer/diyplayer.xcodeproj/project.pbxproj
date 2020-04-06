@@ -42,6 +42,8 @@
 		E96DA16A21319BC200752560 /* diyplayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DA16921319BC200752560 /* diyplayerUITests.swift */; };
 		E9CBF57A23B3A2FF00C157C1 /* ScrollTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CBF57823B3A2FF00C157C1 /* ScrollTabViewController.swift */; };
 		E9CBF57B23B3A2FF00C157C1 /* ScrollTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9CBF57923B3A2FF00C157C1 /* ScrollTabViewController.xib */; };
+		E9E512FC243B792300B88892 /* LiveListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E512FB243B792300B88892 /* LiveListView.swift */; };
+		E9E512FE243B794900B88892 /* LiveListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9E512FD243B794900B88892 /* LiveListView.xib */; };
 		E9EA4421239BFB6F0022DD00 /* CircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EA441F239BFB6F0022DD00 /* CircleViewController.swift */; };
 		E9EA4422239BFB6F0022DD00 /* CircleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9EA4420239BFB6F0022DD00 /* CircleViewController.xib */; };
 		E9EA4425239BFE1D0022DD00 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EA4423239BFE1D0022DD00 /* ProfileViewController.swift */; };
@@ -131,6 +133,8 @@
 		E96DA16B21319BC200752560 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9CBF57823B3A2FF00C157C1 /* ScrollTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollTabViewController.swift; sourceTree = "<group>"; };
 		E9CBF57923B3A2FF00C157C1 /* ScrollTabViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScrollTabViewController.xib; sourceTree = "<group>"; };
+		E9E512FB243B792300B88892 /* LiveListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveListView.swift; sourceTree = "<group>"; };
+		E9E512FD243B794900B88892 /* LiveListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiveListView.xib; sourceTree = "<group>"; };
 		E9EA441F239BFB6F0022DD00 /* CircleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewController.swift; sourceTree = "<group>"; };
 		E9EA4420239BFB6F0022DD00 /* CircleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CircleViewController.xib; sourceTree = "<group>"; };
 		E9EA4423239BFE1D0022DD00 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -259,9 +263,11 @@
 		CEC16B9822C747D200F90ADE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CEC16B9922C747E300F90ADE /* player */,
 				E9F4373921344ACA0011B517 /* CustomSlider.swift */,
 				E9EA4429239C15280022DD00 /* ScrollTabView.swift */,
-				CEC16B9922C747E300F90ADE /* player */,
+				E9E512FB243B792300B88892 /* LiveListView.swift */,
+				E9E512FD243B794900B88892 /* LiveListView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -552,6 +558,7 @@
 				E9EA4426239BFE1D0022DD00 /* ProfileViewController.xib in Resources */,
 				E9EA4422239BFB6F0022DD00 /* CircleViewController.xib in Resources */,
 				E96DA15121319BC200752560 /* Assets.xcassets in Resources */,
+				E9E512FE243B794900B88892 /* LiveListView.xib in Resources */,
 				CE9261C822CD009A00E8F6F3 /* CustomViewController.xib in Resources */,
 				E9F437332132BBAB0011B517 /* PlayViewController.xib in Resources */,
 				CEBD2DBF22E4AA9A00067B4A /* TabBarViewController.xib in Resources */,
@@ -616,6 +623,7 @@
 				CEC0070222DBAADD003AC089 /* UIImage+Custom.swift in Sources */,
 				E9EA4421239BFB6F0022DD00 /* CircleViewController.swift in Sources */,
 				CEA1B47F230D8FA800385E19 /* StrInt.swift in Sources */,
+				E9E512FC243B792300B88892 /* LiveListView.swift in Sources */,
 				CEC16BA022C7500A00F90ADE /* BaseNavigationViewController.swift in Sources */,
 				CEC16BA522C7A91F00F90ADE /* HomeViewController.swift in Sources */,
 				CEBD2DBE22E4AA9A00067B4A /* TabBarViewController.swift in Sources */,
