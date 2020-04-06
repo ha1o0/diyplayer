@@ -20,6 +20,7 @@ class ScrollTabView: UIView {
     var tabScrollView = UIScrollView()
     var underLineView = UIView()
     var tabControllers:[UIViewController] = []
+    var tabContentViews:[UIView] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -65,14 +66,16 @@ class ScrollTabView: UIView {
         }
         self.setButtonSelected(selectedIndex: self.currentIndex)
         tabScrollView.contentSize = CGSize(width: contentWidth, height: tabScrollView.frame.size.height)
-        self.setTabUnderline()
+        if (self.hasBottomLine) {
+            self.setTabUnderline()
+        }
     }
     
     func setButtonSelected(selectedIndex: Int) {
         let buttons:[UIButton] = tabScrollView.subviews as! [UIButton]
         for (index, button) in buttons.enumerated() {
             let titleColor = index == selectedIndex ? self.titleSelectedColor : self.titleColor
-            let titleSize = index == selectedIndex ? 20 : 17
+            let titleSize = index == selectedIndex ? self.titleSelectedSize : self.titleSize
             button.setTitleColor(titleColor, for: .normal)
             button.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(titleSize))
         }
@@ -80,13 +83,13 @@ class ScrollTabView: UIView {
     
     func setTabUnderline() {
         underLineView.backgroundColor = self.titleSelectedColor
-        underLineView.layer.cornerRadius = 1
+        underLineView.layer.cornerRadius = 1.5
         let buttons:[UIButton] = tabScrollView.subviews as! [UIButton]
         let currentButton = buttons[currentIndex]
         tabScrollView.addSubview(underLineView)
         underLineView.snp_makeConstraints { (maker) in
             maker.width.equalTo(30)
-            maker.height.equalTo(2)
+            maker.height.equalTo(3)
             maker.centerX.equalTo(currentButton)
             maker.top.equalTo(currentButton.snp_bottom)
         }
@@ -98,6 +101,12 @@ class ScrollTabView: UIView {
     
     func setTabViewControllers() {
         
+    }
+    
+    func setTabContentView() {
+        for (index, contentView) in self.tabContentViews.enumerated() {
+            
+        }
     }
 
 }

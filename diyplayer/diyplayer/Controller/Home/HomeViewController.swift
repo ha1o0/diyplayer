@@ -65,7 +65,7 @@ class HomeViewController: UIViewController, UISearchBarDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        UIApplication.shared.statusBarStyle = .lightContent
+//        UIApplication.shared.statusBarStyle = .lightContent
 //        navigationController?.navigationBar.backgroundColor = UIColor.main
 //        navigationController?.isNavigationBarHidden = false
     }
@@ -191,7 +191,7 @@ class HomeViewController: UIViewController, UISearchBarDelegate {
     func setScrollTab() {
         let scrollTab = ScrollTabView()
         scrollTab.hasBottomLine = true
-        scrollTab.tabTitles = ["直播", "推荐", "热门", "追番", "影视", "70年"]
+        scrollTab.tabTitles = ["直播", "推荐", "热门", "追番", "影视", "抗击肺炎"]
         scrollTab.setUpView()
         self.view.addSubview(scrollTab)
         scrollTab.snp_makeConstraints { (maker) in
@@ -200,6 +200,12 @@ class HomeViewController: UIViewController, UISearchBarDelegate {
             maker.top.equalTo(self.navigationView.snp_bottom)
             maker.height.equalTo(50)
         }
-        
+        let view1 = LiveListView()
+        let view2 = LiveListView()
+//        view2.testButton.setTitle("view2button", for: .normal)
+        scrollTab.tabContentViews = [view1, view2]
+        scrollTab.setTabContentView()
+//        scrollTab.tabControllers = [controller1, controller2]
+//        scrollTab.setTabViewControllers()
     }
 }
