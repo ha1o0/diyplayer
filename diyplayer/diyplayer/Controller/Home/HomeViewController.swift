@@ -9,11 +9,12 @@
 import UIKit
 import SnapKit
 
-class HomeViewController: UIViewController, UISearchBarDelegate {
+class HomeViewController: UIViewController, UISearchBarDelegate, UICollectionViewDelegate {
     
     let navigationView = UIView()
     let avatarImageView = UIImageView()
     let searchBoxView = UISearchBar()
+    var liveListView: LiveListView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -191,7 +192,7 @@ class HomeViewController: UIViewController, UISearchBarDelegate {
     func setScrollTab() {
         let scrollTab = ScrollTabView()
         scrollTab.hasBottomLine = true
-        scrollTab.tabTitles = ["直播", "推荐", "热门", "追番", "影视", "抗击肺炎"]
+        scrollTab.tabTitles = ["直播", "推荐", "热门"]
         scrollTab.setUpView()
         self.view.addSubview(scrollTab)
         scrollTab.snp_makeConstraints { (maker) in
@@ -200,12 +201,19 @@ class HomeViewController: UIViewController, UISearchBarDelegate {
             maker.top.equalTo(self.navigationView.snp_bottom)
             maker.height.equalTo(50)
         }
-        let view1 = LiveListView()
-        let view2 = LiveListView()
-//        view2.testButton.setTitle("view2button", for: .normal)
-        scrollTab.tabContentViews = [view1, view2]
-        scrollTab.setTabContentView()
-//        scrollTab.tabControllers = [controller1, controller2]
-//        scrollTab.setTabViewControllers()
+        let a = ChannelViewController()
+        let b = ProfileViewController()
+        let c = CircleViewController()
+        let controllers = [a, b, c]
+        var pageViewList = Array<UIView>()
+        for controller in controllers {
+            pageViewList.append(controller.view)
+            addChildViewController(controller)
+        }
+        
+        liveListView = LiveListView(frame: CGRect(x: 0, y: 150, width: UIScreen.main.bounds.width, height: 600), pageViewList: pageViewList, callback: { (offset) in
+//            print(offset)
+        })
+        self.view.addSubview(liveListView!)
     }
 }

@@ -15,8 +15,7 @@ class LiveListView: UIView, UICollectionViewDataSource, UICollectionViewDelegate
     private var pageViewList: [UIView]?
     private var callback : ((_ offset: CGFloat) -> ())?
     private var currentIndex: Int?
-    
-    @IBOutlet weak var testButton: UIButton!
+    private var doCallbackInvock: Bool = true
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,7 +25,30 @@ class LiveListView: UIView, UICollectionViewDataSource, UICollectionViewDelegate
         super.init(coder: coder)
     }
     
-    
+    convenience init(frame: CGRect, pageViewList: [UIView], callback: @escaping (_ offset: CGFloat) -> ()) {
+        self.init(frame: frame)
+        self.callback = callback
+        self.pageViewList = pageViewList
+        let collectionLayout = UICollectionViewFlowLayout.init()
+        collectionLayout.itemSize = frame.size
+        collectionLayout.minimumLineSpacing = 0
+        collectionLayout.minimumInteritemSpacing = 0
+        collectionLayout.scrollDirection = UICollectionViewScrollDirection.horizontal
+        collectionView = UICollectionView.init(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: frame.size), collectionViewLayout: collectionLayout)
+        collectionView?.backgroundColor = UIColor.blue
+        collectionView?.isPagingEnabled = true
+        addSubview(collectionView!)
+        collectionView?.dataSource = self
+        collectionView?.delegate = self
+        collectionView?.showsHorizontalScrollIndicator = true
+        collectionView?.showsVerticalScrollIndicator = true
+        if (pageViewList.count > 0) {
+            for index in 0...pageViewList.count {
+                collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "\(index)")
+            }
+        }
+        
+    }
     
     // MARK: dataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -39,13 +61,14 @@ class LiveListView: UIView, UICollectionViewDataSource, UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(indexPath.row)", for: indexPath)
-        let scrollView = UIScrollView()
-        scrollView.snp.makeConstraints { (maker) in
-            maker.top.equalToSuperview()
-            maker.bottom.equalToSuperview()
-            maker.leading.equalToSuperview()
-            maker.trailing.equalToSuperview()
-        }
+//        let scrollView = UIScrollView()
+//        scrollView.snp.makeConstraints { (maker) in
+//            maker.top.equalToSuperview()
+//            maker.bottom.equalToSuperview()
+//            maker.leading.equalToSuperview()
+//            maker.trailing.equalToSuperview()
+//        }
+        let scrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height))
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.showsVerticalScrollIndicator = false
         scrollView.bounces = true
@@ -62,14 +85,19 @@ class LiveListView: UIView, UICollectionViewDataSource, UICollectionViewDelegate
         if let contentOffset = collectionView?.contentOffset {
             if contentOffset.x == 0 {
                 callback?(0)
-            } else {
+            } else if doCallbackInvock {
                 callback?(contentOffset.x / self.frame.width)
             }
         }
     }
     
+//    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+//        doCallbackInvock = true
+//    }
+    
     func setPage(index: Int) {
         let point = CGPoint(x: CGFloat(index) * collectionView!.frame.size.width, y: collectionView!.frame.origin.y)
+//        doCallbackInvock = false
         collectionView?.setContentOffset(point, animated: true)
         currentIndex = index
     }
