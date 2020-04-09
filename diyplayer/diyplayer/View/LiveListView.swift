@@ -61,13 +61,6 @@ class LiveListView: UIView, UICollectionViewDataSource, UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(indexPath.row)", for: indexPath)
-//        let scrollView = UIScrollView()
-//        scrollView.snp.makeConstraints { (maker) in
-//            maker.top.equalToSuperview()
-//            maker.bottom.equalToSuperview()
-//            maker.leading.equalToSuperview()
-//            maker.trailing.equalToSuperview()
-//        }
         let scrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height))
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.showsVerticalScrollIndicator = false
@@ -91,13 +84,13 @@ class LiveListView: UIView, UICollectionViewDataSource, UICollectionViewDelegate
         }
     }
     
-//    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
-//        doCallbackInvock = true
-//    }
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+        doCallbackInvock = true
+    }
     
     func setPage(index: Int) {
         let point = CGPoint(x: CGFloat(index) * collectionView!.frame.size.width, y: collectionView!.frame.origin.y)
-//        doCallbackInvock = false
+        doCallbackInvock = false
         collectionView?.setContentOffset(point, animated: true)
         currentIndex = index
     }
