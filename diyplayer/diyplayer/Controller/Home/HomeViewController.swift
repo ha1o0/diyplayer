@@ -191,7 +191,7 @@ class HomeViewController: UIViewController, UISearchBarDelegate, UICollectionVie
     
     func setScrollTab() {
         let scrollTab = ScrollTabView()
-        scrollTab.hasBottomLine = true
+        scrollTab.hasBottomLine = false
         scrollTab.tabTitles = ["直播", "推荐", "热门"]
         scrollTab.setUpView()
         self.view.addSubview(scrollTab)
@@ -212,7 +212,11 @@ class HomeViewController: UIViewController, UISearchBarDelegate, UICollectionVie
         }
         
         liveListView = LiveListView(frame: CGRect(x: 0, y: 150, width: UIScreen.main.bounds.width, height: 600), pageViewList: pageViewList, callback: { (offset) in
-//            print(offset)
+            if (CGFloat(Int(offset)) - offset == 0.0) {
+                print(offset)
+                scrollTab.setButtonSelected(selectedIndex: Int(offset))
+            }
+//            scrollTab.setButtonSelected(selectedIndex: offset)
         })
         self.view.addSubview(liveListView!)
     }

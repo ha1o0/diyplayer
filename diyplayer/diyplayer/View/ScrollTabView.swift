@@ -72,13 +72,17 @@ class ScrollTabView: UIView {
     }
     
     func setButtonSelected(selectedIndex: Int) {
-        let buttons:[UIButton] = tabScrollView.subviews as! [UIButton]
-        for (index, button) in buttons.enumerated() {
+        for (index, subview) in tabScrollView.subviews.enumerated() {
+            if (index >= tabTitles.count) {
+                break
+            }
+            let button = subview as! UIButton
             let titleColor = index == selectedIndex ? self.titleSelectedColor : self.titleColor
             let titleSize = index == selectedIndex ? self.titleSelectedSize : self.titleSize
             button.setTitleColor(titleColor, for: .normal)
             button.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(titleSize))
         }
+        currentIndex = selectedIndex
     }
     
     func setTabUnderline() {
