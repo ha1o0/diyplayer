@@ -1,0 +1,750 @@
+{
+    "success": false,
+    "departments": [
+        {
+            "name": "开发部",
+            "type": 1,
+            "departmentId": 200002620,
+            "departmentCode": null
+        },
+        {
+            "name": "复星研发一部",
+            "type": 1,
+            "departmentId": 200003102,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "测试部",
+            "type": 1,
+            "departmentId": 200003103,
+            "departmentCode": null
+        },
+        {
+            "name": "复星蜂巢控股",
+            "type": 1,
+            "departmentId": 200003104,
+            "departmentCode": null
+        },
+        {
+            "name": "复星健康险与健康管理集团",
+            "type": 1,
+            "departmentId": 200003105,
+            "departmentCode": null
+        },
+        {
+            "name": "复衡保险",
+            "type": 1,
+            "departmentId": 200003106,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "星康链",
+            "type": 1,
+            "departmentId": 200003107,
+            "departmentCode": null
+        },
+        {
+            "name": "复星创富",
+            "type": 1,
+            "departmentId": 200003108,
+            "departmentCode": null
+        },
+        {
+            "name": "复星医药",
+            "type": 1,
+            "departmentId": 200003109,
+            "departmentCode": null
+        },
+        {
+            "name": "复星影视文化集团",
+            "type": 1,
+            "departmentId": 200003110,
+            "departmentCode": null
+        },
+        {
+            "name": "复星美元产业基金",
+            "type": 1,
+            "departmentId": 200003111,
+            "departmentCode": null
+        },
+        {
+            "name": "复星科技与金融集团",
+            "type": 1,
+            "departmentId": 200003112,
+            "departmentCode": null
+        },
+        {
+            "name": "复星时尚集团",
+            "type": 1,
+            "departmentId": 200003113,
+            "departmentCode": null
+        },
+        {
+            "name": "复星化妆品集团",
+            "type": 1,
+            "departmentId": 200003114,
+            "departmentCode": null
+        },
+        {
+            "name": "复星津美",
+            "type": 1,
+            "departmentId": 200003115,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "浙江复逸化妆品",
+            "type": 1,
+            "departmentId": 200003116,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "复星母婴与家庭产业集团",
+            "type": 1,
+            "departmentId": 200003117,
+            "departmentCode": null
+        },
+        {
+            "name": "复星资源集团",
+            "type": 1,
+            "departmentId": 200003118,
+            "departmentCode": null
+        },
+        {
+            "name": "复星能源环境及智能装备集团",
+            "type": 1,
+            "departmentId": 200003119,
+            "departmentCode": null
+        },
+        {
+            "name": "复星智慧制造（消费）产业集团",
+            "type": 1,
+            "departmentId": 200003120,
+            "departmentCode": null
+        },
+        {
+            "name": "复星星元资本",
+            "type": 1,
+            "departmentId": 200003121,
+            "departmentCode": null
+        },
+        {
+            "name": "复星保险集团",
+            "type": 1,
+            "departmentId": 200003122,
+            "departmentCode": null
+        },
+        {
+            "name": "复星联合健康保险",
+            "type": 1,
+            "departmentId": 200003123,
+            "departmentCode": null
+        },
+        {
+            "name": "复星体育产业集团",
+            "type": 1,
+            "departmentId": 200003124,
+            "departmentCode": null
+        },
+        {
+            "name": "复娱文化",
+            "type": 1,
+            "departmentId": 200003125,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "复星财务公司",
+            "type": 1,
+            "departmentId": 200003126,
+            "departmentCode": null
+        },
+        {
+            "name": "星未来资本",
+            "type": 1,
+            "departmentId": 200003127,
+            "departmentCode": null
+        },
+        {
+            "name": "锐正资本",
+            "type": 1,
+            "departmentId": 200003128,
+            "departmentCode": null
+        },
+        {
+            "name": "人力资源管理中心",
+            "type": 1,
+            "departmentId": 200003129,
+            "departmentCode": null
+        },
+        {
+            "name": "健控",
+            "type": 1,
+            "departmentId": 200003130,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "复星旅游文化集团",
+            "type": 1,
+            "departmentId": 200003131,
+            "departmentCode": null
+        },
+        {
+            "name": "豫园股份总部",
+            "type": 1,
+            "departmentId": 200003132,
+            "departmentCode": null
+        },
+        {
+            "name": "复地产业发展集团",
+            "type": 1,
+            "departmentId": 200003133,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "星泓产业发展集团",
+            "type": 1,
+            "departmentId": 200003134,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "珠宝时尚集团",
+            "type": 1,
+            "departmentId": 200003135,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "文化餐饮娱乐集团",
+            "type": 1,
+            "departmentId": 200003136,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "文化食品饮料集团",
+            "type": 1,
+            "departmentId": 200003137,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "美丽健康集团",
+            "type": 1,
+            "departmentId": 200003138,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "文化商业集团",
+            "type": 1,
+            "departmentId": 200003139,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "智慧零售集团",
+            "type": 1,
+            "departmentId": 200003140,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "云尚产业发展集团",
+            "type": 1,
+            "departmentId": 200003141,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "星景控股",
+            "type": 1,
+            "departmentId": 200003142,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "汉辰表业",
+            "type": 1,
+            "departmentId": 200003143,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "智能科技中台事业群",
+            "type": 1,
+            "departmentId": 200003144,
+            "departmentCode": null
+        },
+        {
+            "name": "星济科技",
+            "type": 1,
+            "departmentId": 200003145,
+            "departmentCode": null
+        },
+        {
+            "name": "云济科技",
+            "type": 1,
+            "departmentId": 200003146,
+            "departmentCode": null
+        },
+        {
+            "name": "智能科技中台事业群",
+            "type": 1,
+            "departmentId": 200003147,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "管理中台",
+            "type": 1,
+            "departmentId": 200003148,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "技术中台",
+            "type": 1,
+            "departmentId": 200003149,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "业务中台",
+            "type": 1,
+            "departmentId": 200003150,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "质量管理",
+            "type": 1,
+            "departmentId": 200003151,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "咨酷科技",
+            "type": 1,
+            "departmentId": 200003152,
+            "departmentCode": null
+        },
+        {
+            "name": "智慧餐饮事业部",
+            "type": 1,
+            "departmentId": 200003153,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "产品交付中心",
+            "type": 1,
+            "departmentId": 200003154,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "流量运营中心",
+            "type": 1,
+            "departmentId": 200003155,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "技术研发中心",
+            "type": 1,
+            "departmentId": 200003156,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "总经办",
+            "type": 1,
+            "departmentId": 200003157,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "财务部",
+            "type": 1,
+            "departmentId": 200003158,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "X PLAN",
+            "type": 1,
+            "departmentId": 200003159,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "销售管理中心",
+            "type": 1,
+            "departmentId": 200003160,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "智健科技",
+            "type": 1,
+            "departmentId": 200003161,
+            "departmentCode": null
+        },
+        {
+            "name": "大数医达",
+            "type": 1,
+            "departmentId": 200003162,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "杏脉科技",
+            "type": 1,
+            "departmentId": 200003163,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "基诺联",
+            "type": 1,
+            "departmentId": 200003164,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "星医通",
+            "type": 1,
+            "departmentId": 200003165,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "百合佳缘",
+            "type": 1,
+            "departmentId": 200003166,
+            "departmentCode": null
+        },
+        {
+            "name": "百合佳缘网络集团股份有限公司",
+            "type": 1,
+            "departmentId": 200003167,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "百合佳缘网络集团股份有限公司天津分公司",
+            "type": 1,
+            "departmentId": 200003168,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "百合幸福文化发展有限公司",
+            "type": 1,
+            "departmentId": 200003169,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "百合幸福文化发展有限公司北京分公司",
+            "type": 1,
+            "departmentId": 200003170,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "百合幸福文化发展有限公司上海分公司",
+            "type": 1,
+            "departmentId": 200003171,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "百合幸福文化发展有限公司深圳分公司",
+            "type": 1,
+            "departmentId": 200003172,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "百合幸福文化发展有限公司武汉分公司",
+            "type": 1,
+            "departmentId": 200003173,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "北京百合爱旅国际旅游有限公司",
+            "type": 1,
+            "departmentId": 200003174,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "北京百合小两口网络科技有限公司",
+            "type": 1,
+            "departmentId": 200003175,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "北京百合小两口信息技术有限公司上海分公司",
+            "type": 1,
+            "departmentId": 200003176,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "上海佳作餐饮有限公司",
+            "type": 1,
+            "departmentId": 200003177,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "天津百合小两口网络科技有限公司",
+            "type": 1,
+            "departmentId": 200003178,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "天津百合信息技术服务有限公司",
+            "type": 1,
+            "departmentId": 200003179,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "北京百合小两口信息技术有限公司",
+            "type": 1,
+            "departmentId": 200003180,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "上海添缘餐饮有限公司",
+            "type": 1,
+            "departmentId": 200003181,
+            "parentCode": null,
+            "departmentCode": null
+        },
+        {
+            "name": "掌星宝",
+            "type": 1,
+            "departmentId": 200003182,
+            "departmentCode": null
+        },
+        {
+            "name": "游戏事业部",
+            "type": 1,
+            "departmentId": 200003183,
+            "departmentCode": null
+        },
+        {
+            "name": "复星互联网文化产业集团",
+            "type": 1,
+            "departmentId": 200003184,
+            "departmentCode": null
+        },
+        {
+            "name": "复星产业大数据集团",
+            "type": 1,
+            "departmentId": 200003185,
+            "departmentCode": null
+        },
+        {
+            "name": "公共事务与企业传播中心",
+            "type": 1,
+            "departmentId": 200003186,
+            "departmentCode": null
+        },
+        {
+            "name": "行政服务与管理",
+            "type": 1,
+            "departmentId": 200003187,
+            "departmentCode": null
+        },
+        {
+            "name": "风险管理部",
+            "type": 1,
+            "departmentId": 200003188,
+            "departmentCode": null
+        },
+        {
+            "name": "法律事务部",
+            "type": 1,
+            "departmentId": 200003189,
+            "departmentCode": null
+        },
+        {
+            "name": "审计部",
+            "type": 1,
+            "departmentId": 200003190,
+            "departmentCode": null
+        },
+        {
+            "name": "廉政督察部",
+            "type": 1,
+            "departmentId": 200003191,
+            "departmentCode": null
+        },
+        {
+            "name": "董秘办",
+            "type": 1,
+            "departmentId": 200003192,
+            "departmentCode": null
+        },
+        {
+            "name": "安全质量环保督察部",
+            "type": 1,
+            "departmentId": 200003193,
+            "departmentCode": null
+        },
+        {
+            "name": "EHSQ&供应链&项目运营部",
+            "type": 1,
+            "departmentId": 200003194,
+            "departmentCode": null
+        },
+        {
+            "name": "董事会办公室",
+            "type": 1,
+            "departmentId": 200003195,
+            "departmentCode": null
+        },
+        {
+            "name": "成本与采购管理部",
+            "type": 1,
+            "departmentId": 200003196,
+            "departmentCode": null
+        },
+        {
+            "name": "资金管理中心",
+            "type": 1,
+            "departmentId": 200003197,
+            "departmentCode": null
+        },
+        {
+            "name": "投资管理中心",
+            "type": 1,
+            "departmentId": 200003198,
+            "departmentCode": null
+        },
+        {
+            "name": "财务报告",
+            "type": 1,
+            "departmentId": 200003199,
+            "departmentCode": null
+        },
+        {
+            "name": "复星康养",
+            "type": 1,
+            "departmentId": 200003200,
+            "departmentCode": null
+        },
+        {
+            "name": "上海助群信息技术服务有限公司",
+            "type": 1,
+            "departmentId": 200003201,
+            "departmentCode": null
+        },
+        {
+            "name": "上海星益健康管理有限公司",
+            "type": 1,
+            "departmentId": 200003202,
+            "departmentCode": null
+        },
+        {
+            "name": "上海复星创业投资管理有限公司",
+            "type": 1,
+            "departmentId": 200003203,
+            "departmentCode": null
+        },
+        {
+            "name": "复星保德信",
+            "type": 1,
+            "departmentId": 200003204,
+            "departmentCode": null
+        },
+        {
+            "name": "商流产发集团",
+            "type": 1,
+            "departmentId": 200003205,
+            "departmentCode": null
+        },
+        {
+            "name": "产品品牌管理部",
+            "type": 1,
+            "departmentId": 200003206,
+            "departmentCode": null
+        },
+        {
+            "name": "产品及科技创新中心",
+            "type": 1,
+            "departmentId": 200003207,
+            "departmentCode": null
+        },
+        {
+            "name": "战略合作及业务发展部",
+            "type": 1,
+            "departmentId": 200003208,
+            "departmentCode": null
+        },
+        {
+            "name": "供应链创新部",
+            "type": 1,
+            "departmentId": 200003209,
+            "departmentCode": null
+        },
+        {
+            "name": "市场部",
+            "type": 1,
+            "departmentId": 200003210,
+            "departmentCode": null
+        },
+        {
+            "name": "销售拓展部",
+            "type": 1,
+            "departmentId": 200003211,
+            "departmentCode": null
+        },
+        {
+            "name": "用户运营部",
+            "type": 1,
+            "departmentId": 200003212,
+            "departmentCode": null
+        },
+        {
+            "name": "复星儿童教育产业集团",
+            "type": 1,
+            "departmentId": 200003213,
+            "departmentCode": null
+        },
+        {
+            "name": "FFT",
+            "type": 1,
+            "departmentId": 200003214,
+            "departmentCode": null
+        },
+        {
+            "name": "C2M好产品及战略规划推进部",
+            "type": 1,
+            "departmentId": 200003215,
+            "departmentCode": null
+        },
+        {
+            "name": "复星校招",
+            "type": 1,
+            "departmentId": 200003216,
+            "departmentCode": null
+        }
+    ]
+}
