@@ -10,6 +10,7 @@ import UIKit
 
 class AdViewController: UIViewController {
     @IBOutlet weak var switchButton: UISwitch!
+    @IBOutlet weak var testLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,7 @@ class AdViewController: UIViewController {
     
     @objc func switchDidChange(){
         if (self.switchButton.isOn) {
+//            self.getDepartmentInfo()
             self.navigationController?.pushViewController(TabBarViewController(), animated: true)
         }
     }
@@ -39,5 +41,17 @@ class AdViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.white
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(),for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
+    }
+    
+    func getDepartmentInfo() {
+        DqmkxAPIProvider.sharedInstance.request(DqmkxAPI.getDepartment, successClosure: { (response: DepartmentModel) in
+            guard let result = response.success else {
+                print("success error")
+                return
+            }
+            self.testLabel.text = result ? "department" : "failed"
+        }, failureClosure: { (error) in
+            print(error)
+        })
     }
 }

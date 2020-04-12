@@ -36,6 +36,12 @@
 		CEC16BA122C7500A00F90ADE /* BaseNavigationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC16B9F22C7500A00F90ADE /* BaseNavigationViewController.xib */; };
 		CEC16BA522C7A91F00F90ADE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC16BA322C7A91F00F90ADE /* HomeViewController.swift */; };
 		CEC16BA622C7A91F00F90ADE /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC16BA422C7A91F00F90ADE /* HomeViewController.xib */; };
+		E9632E7F2441AB12006D0266 /* DqmkxAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9632E7E2441AB12006D0266 /* DqmkxAPI.swift */; };
+		E9632E812441B21F006D0266 /* DqmkxProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9632E802441B21F006D0266 /* DqmkxProvider.swift */; };
+		E9632E842442F33C006D0266 /* Mapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9632E832442F33C006D0266 /* Mapable.swift */; };
+		E9632E862442F3A1006D0266 /* DepartmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9632E852442F3A1006D0266 /* DepartmentModel.swift */; };
+		E9632E892442F484006D0266 /* getDepartment.json in Resources */ = {isa = PBXBuildFile; fileRef = E9632E882442F484006D0266 /* getDepartment.json */; };
+		E9632E8D24431A44006D0266 /* BaseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9632E8C24431A44006D0266 /* BaseDataModel.swift */; };
 		E96DA14A21319BC200752560 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DA14921319BC200752560 /* AppDelegate.swift */; };
 		E96DA15121319BC200752560 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E96DA15021319BC200752560 /* Assets.xcassets */; };
 		E96DA15F21319BC200752560 /* diyplayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DA15E21319BC200752560 /* diyplayerTests.swift */; };
@@ -120,6 +126,12 @@
 		E91525CF23F12FAE00B22D49 /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E91525D023F12FAE00B22D49 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E91525D123F12FAE00B22D49 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9632E7E2441AB12006D0266 /* DqmkxAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DqmkxAPI.swift; sourceTree = "<group>"; };
+		E9632E802441B21F006D0266 /* DqmkxProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DqmkxProvider.swift; sourceTree = "<group>"; };
+		E9632E832442F33C006D0266 /* Mapable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapable.swift; sourceTree = "<group>"; };
+		E9632E852442F3A1006D0266 /* DepartmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentModel.swift; sourceTree = "<group>"; };
+		E9632E882442F484006D0266 /* getDepartment.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = getDepartment.json; sourceTree = "<group>"; };
+		E9632E8C24431A44006D0266 /* BaseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDataModel.swift; sourceTree = "<group>"; };
 		E96DA14621319BC200752560 /* diyplayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = diyplayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E96DA14921319BC200752560 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E96DA15021319BC200752560 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -209,6 +221,8 @@
 				CEA1B475230D8F8A00385E19 /* DMModel.swift */,
 				CEA1B478230D8F9800385E19 /* HttpRequest.swift */,
 				CEA1B480230D8FB100385E19 /* MoyaConfig.swift */,
+				E9632E7E2441AB12006D0266 /* DqmkxAPI.swift */,
+				E9632E802441B21F006D0266 /* DqmkxProvider.swift */,
 			);
 			path = Moya;
 			sourceTree = "<group>";
@@ -301,6 +315,7 @@
 		CEDA1C6D22F1FB6400FA6365 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				E9632E872442F464006D0266 /* MockData */,
 				CEA1B473230D8E9800385E19 /* Moya */,
 				CE2E97842251E97B00EC8CD3 /* Alamofire-SwiftyJSON.swift */,
 			);
@@ -324,6 +339,24 @@
 				E9F4373B213580400011B517 /* TimeUtil.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		E9632E822442F313006D0266 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E9632E832442F33C006D0266 /* Mapable.swift */,
+				E9632E8C24431A44006D0266 /* BaseDataModel.swift */,
+				E9632E852442F3A1006D0266 /* DepartmentModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E9632E872442F464006D0266 /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				E9632E882442F484006D0266 /* getDepartment.json */,
+			);
+			path = MockData;
 			sourceTree = "<group>";
 		};
 		E96DA13D21319BC200752560 = {
@@ -351,6 +384,7 @@
 		E96DA14821319BC200752560 /* diyplayer */ = {
 			isa = PBXGroup;
 			children = (
+				E9632E822442F313006D0266 /* Model */,
 				CEDA1C6F22F1FB7500FA6365 /* Util */,
 				CEDA1C6E22F1FB6B00FA6365 /* Extension */,
 				CEDA1C6D22F1FB6400FA6365 /* Network */,
@@ -557,6 +591,7 @@
 				E96DA15121319BC200752560 /* Assets.xcassets in Resources */,
 				CE9261C822CD009A00E8F6F3 /* CustomViewController.xib in Resources */,
 				E9F437332132BBAB0011B517 /* PlayViewController.xib in Resources */,
+				E9632E892442F484006D0266 /* getDepartment.json in Resources */,
 				CEBD2DBF22E4AA9A00067B4A /* TabBarViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -603,6 +638,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9632E8D24431A44006D0266 /* BaseDataModel.swift in Sources */,
 				CEA1B481230D8FB100385E19 /* MoyaConfig.swift in Sources */,
 				CE9261CB22CD063500E8F6F3 /* BaseViewController.swift in Sources */,
 				CEA1B476230D8F8A00385E19 /* DMAPI.swift in Sources */,
@@ -610,12 +646,14 @@
 				CE2E97852251E97B00EC8CD3 /* Alamofire-SwiftyJSON.swift in Sources */,
 				E96DA14A21319BC200752560 /* AppDelegate.swift in Sources */,
 				E9EA4425239BFE1D0022DD00 /* ProfileViewController.swift in Sources */,
+				E9632E842442F33C006D0266 /* Mapable.swift in Sources */,
 				E9EA442A239C15280022DD00 /* ScrollTabView.swift in Sources */,
 				CEA1B479230D8F9800385E19 /* HttpRequest.swift in Sources */,
 				E9F4372F2132A21D0011B517 /* DiyPlayerView.swift in Sources */,
 				CE9261C722CD009A00E8F6F3 /* CustomViewController.swift in Sources */,
 				CEC0070022DB93C4003AC089 /* UIImageView+URL.swift in Sources */,
 				CEA1B47E230D8FA800385E19 /* SaveFiles.swift in Sources */,
+				E9632E7F2441AB12006D0266 /* DqmkxAPI.swift in Sources */,
 				CEC0070222DBAADD003AC089 /* UIImage+Custom.swift in Sources */,
 				E9EA4421239BFB6F0022DD00 /* CircleViewController.swift in Sources */,
 				CEA1B47F230D8FA800385E19 /* StrInt.swift in Sources */,
@@ -626,12 +664,14 @@
 				CEBD2DC322E4BF2B00067B4A /* ChannelViewController.swift in Sources */,
 				CE9261CE22CD0BC200E8F6F3 /* UIColor+hex.swift in Sources */,
 				E9F437322132BBAB0011B517 /* PlayViewController.swift in Sources */,
+				E9632E862442F3A1006D0266 /* DepartmentModel.swift in Sources */,
 				E9F4373C213580400011B517 /* TimeUtil.swift in Sources */,
 				CEA1B47D230D8FA800385E19 /* HUD.swift in Sources */,
 				E9CBF57A23B3A2FF00C157C1 /* ScrollTabViewController.swift in Sources */,
 				E9F4373A21344ACA0011B517 /* CustomSlider.swift in Sources */,
 				CEC16B9522C746F800F90ADE /* AdViewController.swift in Sources */,
 				E9F4373E213583B90011B517 /* Constants.swift in Sources */,
+				E9632E812441B21F006D0266 /* DqmkxProvider.swift in Sources */,
 				CE3D5EFA22C3D1FF00FE1F30 /* Image+Gif.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
