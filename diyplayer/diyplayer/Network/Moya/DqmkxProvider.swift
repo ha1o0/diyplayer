@@ -1,9 +1,8 @@
 //
-//  DqmkxProvider.swift
-//  diyplayer
+//  DqmkxAPIProvider.swift
+//  iOS-dqmkx
 //
-//  Created by sidney on 2020/4/11.
-//  Copyright © 2020 sidney. All rights reserved.
+//  Created by sidney on 4/13/20.
 //
 
 import Foundation
@@ -11,7 +10,7 @@ import Alamofire
 import Moya
 import SwiftyJSON
 
-let useMockData = true
+let useMockData = false
 let requestTimeout = TimeInterval(60)
 
 class DqmkxAPIProvider: MoyaProvider<DqmkxAPI> {
@@ -46,13 +45,13 @@ class DqmkxAPIProvider: MoyaProvider<DqmkxAPI> {
     @discardableResult
     func request<T: Mapable>(_ target: DqmkxAPI,
                     successClosure: @escaping (T) -> Void,
-                    failureClosure: @escaping (String) -> Void) -> Cancellable {
+                    failureClosure: @escaping (ErrorModel) -> Void) -> Cancellable {
         return super.request(target) {result in
             switch result {
             case .success(let response):
                 let httpStatusCode = response.statusCode
                 let data = response.data
-                let errorInfo = ""
+                let errorModel = ErrorModel()
                 switch httpStatusCode {
                 case 200:
                     do {
@@ -60,15 +59,24 @@ class DqmkxAPIProvider: MoyaProvider<DqmkxAPI> {
                         let result = T(jsonData: jsonDic)
                         successClosure(result)
                     } catch {
-                        failureClosure(errorInfo)
+                        errorModel.code = 100001
+                        failureClosure(errorModel)
                     }
                 case 401:
-                    failureClosure(errorInfo)
+                    failureClosure(errorModel)
                 default:
-                    failureClosure(errorInfo)
+                    failureClosure(errorModel)
                 }
-            case .failure(_):
-                failureClosure("")
+            case .failure(let error):
+                switch error {
+                case .underlying(let errorInfo, _):
+                    let errorModel = ErrorModel()
+                    errorModel.code = errorInfo._code
+                    errorModel.message = errorInfo.localizedDescription
+                    failureClosure(errorModel)
+                default:
+                    break
+                }
             }
         }
     }

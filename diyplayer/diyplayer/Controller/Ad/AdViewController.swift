@@ -44,7 +44,7 @@ class AdViewController: UIViewController {
     }
     
     func getDepartmentInfo() {
-        DqmkxAPIProvider.sharedInstance.request(DqmkxAPI.getDepartment, successClosure: { (response: DepartmentModel) in
+        DqmkxAPIProvider.sharedInstance.request(DqmkxAPI.getDepartments, successClosure: { (response: DepartmentModel) in
             guard let result = response.success else {
                 print("success error")
                 return
