@@ -1,9 +1,8 @@
 //
-//  DqmkxAPI.swift
-//  diyplayer
+//  DqmAPI.swift
+//  iOS-dqmkx
 //
-//  Created by sidney on 2020/4/11.
-//  Copyright © 2020 sidney. All rights reserved.
+//  Created by sidney on 4/10/20.
 //
 
 import Foundation
@@ -18,9 +17,9 @@ let host = [
 let env = "stage"
 
 enum DqmkxAPI {
-    case login
-    case getUserInfo
-    case getDepartment
+    case login(username: String, password: String)
+    case getUserInfo(userId: Int)
+    case getDepartments
 }
 
 extension DqmkxAPI: TargetType {
@@ -32,30 +31,30 @@ extension DqmkxAPI: TargetType {
     var path: String {
         switch self {
         case .login:
-            return ""
-        case .getDepartment:
+            return "/"
+        case .getDepartments:
             return "/v1/departments"
         default:
-            return ""
+            return "/"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .getDepartment:
-            return .get
+        case .login:
+            return .post
         default:
             return .get
         }
     }
     
     var task: Task {
-        switch self {
-        case .getDepartment:
-            return .requestPlain
-        default:
-            return .requestPlain
+        if method == .get {
+            return .requestParameters(parameters: urlParams, encoding: URLEncoding.default)
+        } else if method == .post {
+            return .requestCompositeParameters(bodyParameters: bodyParams, bodyEncoding: JSONEncoding.default, urlParameters: urlParams)
         }
+        return .requestPlain
     }
     
     var sampleData: Data {
@@ -68,8 +67,44 @@ extension DqmkxAPI: TargetType {
 
 }
 
+extension DqmkxAPI {
+    var urlParams: [String: Any] {
+        var param: [String: Any] = [:]
+        switch self {
+        case .getUserInfo(let userId):
+            param["userId"] = userId
+            break
+        default:
+            break
+        }
+        return param
+    }
+    
+    var bodyParams: [String: Any] {
+        var param: [String: Any] = [:]
+        switch self {
+        case .login(let username, let password):
+            param["username"] = username
+            param["password"] = password
+            break
+        default:
+            break
+        }
+        return param
+    }
+    
+}
+
+extension DqmkxAPI {
+    @discardableResult
+    func request<T: Mapable>(successClosure: @escaping (T) -> Void,
+                             failureClosure: @escaping (ErrorModel) -> Void) -> Cancellable? {
+        return DqmkxAPIProvider.sharedInstance.request(self, successClosure: successClosure, failureClosure: failureClosure)
+    }
+}
+
 // MARK: - Get mock data from json file
-private func getMockDataResponse(_ filename: String) -> Data? {
+func getMockDataResponse(_ filename: String) -> Data? {
     @objc class EmptyClass: NSObject { }
     let bundle = Bundle(for: EmptyClass.self)
     let pathOptional = bundle.path(forResource: filename, ofType: "json")

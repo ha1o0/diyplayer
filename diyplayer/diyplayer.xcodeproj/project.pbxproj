@@ -46,6 +46,7 @@
 		E96DA15121319BC200752560 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E96DA15021319BC200752560 /* Assets.xcassets */; };
 		E96DA15F21319BC200752560 /* diyplayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DA15E21319BC200752560 /* diyplayerTests.swift */; };
 		E96DA16A21319BC200752560 /* diyplayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DA16921319BC200752560 /* diyplayerUITests.swift */; };
+		E98C7E3D2449BD6300476C88 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98C7E3C2449BD6300476C88 /* ErrorModel.swift */; };
 		E9CBF57A23B3A2FF00C157C1 /* ScrollTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CBF57823B3A2FF00C157C1 /* ScrollTabViewController.swift */; };
 		E9CBF57B23B3A2FF00C157C1 /* ScrollTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9CBF57923B3A2FF00C157C1 /* ScrollTabViewController.xib */; };
 		E9E512FC243B792300B88892 /* LiveListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E512FB243B792300B88892 /* LiveListView.swift */; };
@@ -142,6 +143,7 @@
 		E96DA16521319BC200752560 /* diyplayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = diyplayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E96DA16921319BC200752560 /* diyplayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diyplayerUITests.swift; sourceTree = "<group>"; };
 		E96DA16B21319BC200752560 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E98C7E3C2449BD6300476C88 /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
 		E9CBF57823B3A2FF00C157C1 /* ScrollTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollTabViewController.swift; sourceTree = "<group>"; };
 		E9CBF57923B3A2FF00C157C1 /* ScrollTabViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScrollTabViewController.xib; sourceTree = "<group>"; };
 		E9E512FB243B792300B88892 /* LiveListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveListView.swift; sourceTree = "<group>"; };
@@ -347,6 +349,7 @@
 				E9632E832442F33C006D0266 /* Mapable.swift */,
 				E9632E8C24431A44006D0266 /* BaseDataModel.swift */,
 				E9632E852442F3A1006D0266 /* DepartmentModel.swift */,
+				E98C7E3C2449BD6300476C88 /* ErrorModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -644,6 +647,7 @@
 				CEA1B476230D8F8A00385E19 /* DMAPI.swift in Sources */,
 				CEA1B477230D8F8A00385E19 /* DMModel.swift in Sources */,
 				CE2E97852251E97B00EC8CD3 /* Alamofire-SwiftyJSON.swift in Sources */,
+				E98C7E3D2449BD6300476C88 /* ErrorModel.swift in Sources */,
 				E96DA14A21319BC200752560 /* AppDelegate.swift in Sources */,
 				E9EA4425239BFE1D0022DD00 /* ProfileViewController.swift in Sources */,
 				E9632E842442F33C006D0266 /* Mapable.swift in Sources */,
