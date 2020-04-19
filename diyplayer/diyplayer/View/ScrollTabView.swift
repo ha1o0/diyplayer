@@ -21,6 +21,8 @@ class ScrollTabView: UIView {
     var underLineView = UIView()
     var tabControllers:[UIViewController] = []
     var tabContentViews:[UIView] = []
+    var underLineViewWidth:CGFloat = 0
+    var underLineViewLeading:CGFloat = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,6 +35,11 @@ class ScrollTabView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        underLineViewWidth = underLineView.frame.width
+        underLineViewLeading = underLineView.frame.origin.x
     }
     
     
@@ -66,9 +73,7 @@ class ScrollTabView: UIView {
         }
         self.setButtonSelected(selectedIndex: self.currentIndex)
         tabScrollView.contentSize = CGSize(width: contentWidth, height: tabScrollView.frame.size.height)
-        if (self.hasBottomLine) {
-            self.setTabUnderline()
-        }
+        self.setTabUnderline()
     }
     
     func setButtonSelected(selectedIndex: Int) {
@@ -86,12 +91,15 @@ class ScrollTabView: UIView {
     }
     
     func setTabUnderline() {
+        if !hasBottomLine {
+            return
+        }
         underLineView.backgroundColor = self.titleSelectedColor
         underLineView.layer.cornerRadius = 1.5
         let buttons:[UIButton] = tabScrollView.subviews as! [UIButton]
         let currentButton = buttons[currentIndex]
         tabScrollView.addSubview(underLineView)
-        underLineView.snp_makeConstraints { (maker) in
+        underLineView.snp.makeConstraints { (maker) in
             maker.width.equalTo(30)
             maker.height.equalTo(3)
             maker.centerX.equalTo(currentButton)
@@ -99,18 +107,46 @@ class ScrollTabView: UIView {
         }
     }
     
-    func slideUnderline() {
+    func slideUnderline(offset: CGFloat) {
+        if !hasBottomLine {
+            return
+        }
+        let relativeOffset = offset - CGFloat(currentIndex)
+        let buttons:[UIButton] = tabScrollView.subviews as! [UIButton]
+        let currentButton = buttons[currentIndex]
+        var subWidth = CGFloat.zero
+        var subLeading = CGFloat.zero
+        if (currentIndex == (tabTitles.count - 1) && relativeOffset > 0) || (currentIndex == 0 && relativeOffset < 0) {
+            return
+        }
+        if currentIndex < (tabTitles.count - 1) && relativeOffset > 0 {
+            subWidth = CGFloat(buttons[currentIndex + 1].frame.width) - CGFloat(currentButton.frame.width)
+            subLeading = CGFloat(buttons[currentIndex + 1].frame.origin.x) - CGFloat(currentButton.frame.origin.x)
+        }
+        if currentIndex > 0 && relativeOffset < 0 {
+            subWidth = CGFloat(currentButton.frame.width) - CGFloat(buttons[currentIndex - 1].frame.width)
+            subLeading = CGFloat(currentButton.frame.origin.x) - CGFloat(buttons[currentIndex - 1].frame.origin.x)
+        }
+        
+        underLineView.snp.remakeConstraints { (maker) in
+            
+            let changeWidth = underLineViewWidth + relativeOffset * subWidth
+            let changeLeading = underLineViewLeading + relativeOffset * subLeading
+            maker.width.equalTo(changeWidth)
+            maker.height.equalTo(3)
+            maker.leading.equalToSuperview().offset(changeLeading)
+            maker.top.equalTo(currentButton.snp_bottom)
+            if (CGFloat(Int(offset)) - offset == 0.0) {
+                underLineViewWidth = changeWidth
+                underLineViewLeading = changeLeading
+                setButtonSelected(selectedIndex: Int(offset))
+            }
+        }
         
     }
     
     func setTabViewControllers() {
         
-    }
-    
-    func setTabContentView() {
-        for (index, contentView) in self.tabContentViews.enumerated() {
-            
-        }
     }
 
 }
