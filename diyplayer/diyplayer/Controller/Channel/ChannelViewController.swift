@@ -8,47 +8,66 @@
 
 import UIKit
 import FreeStreamer
+import SuperPlayer
 
-class ChannelViewController: CustomViewController {
+class ChannelViewController: CustomViewController, SuperPlayerDelegate {
 
     var musicUrl = "http://www.0dutv.com/plug/down/up2.php/105030812.mp3"
     var audioStream: FSAudioStream?
     var isInit: Bool = true
+    var superView: SuperPlayerView = SuperPlayerView()
+    var playModel: SuperPlayerModel = SuperPlayerModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        audioStream = FSAudioStream.init(url: URL(string: musicUrl))
+        self.view.addSubview(superView)
+        superView.snp.makeConstraints { (maker) in
+//            maker.width.equalTo(1)
+//            maker.height.equalTo(1)
+//            maker.center.equalToSuperview()
+            maker.bottom.equalToSuperview().offset(34)
+            maker.leading.equalToSuperview()
+            maker.trailing.equalToSuperview()
+            maker.height.equalTo(200)
+        }
+        superView.delegate = self
+        superView.isHidden = true
+        playModel.videoURL = musicUrl
+//        audioStream = FSAudioStream.init(url: URL(string: musicUrl))
         // Do any additional setup after loading the view.
     }
 
 
     @IBAction func play(_ sender: UIButton) {
-        if (audioStream?.isPlaying())! {
+        if superView.state == .StatePlaying {
             return
         }
         if isInit {
-            audioStream!.play()
+            superView.play(with: playModel)
             isInit = false
         } else {
-            audioStream?.pause()
+            superView.resume()
         }
+//        if (audioStream?.isPlaying())! {
+//            return
+//        }
+//        if isInit {
+//            audioStream!.play()
+//            isInit = false
+//        } else {
+//            audioStream?.pause()
+//        }
         
     }
 
     @IBAction func pause(_ sender: UIButton) {
-        if !(audioStream?.isPlaying())! {
-            return
-        }
-        audioStream!.pause()
-    }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+            superView.pause()
+
+//        if !(audioStream?.isPlaying())! {
+//            return
+//        }
+//        audioStream!.pause()
     }
-    */
 
 }
