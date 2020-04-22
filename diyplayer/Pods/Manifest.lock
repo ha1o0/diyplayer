@@ -7,6 +7,8 @@ PODS:
     - Charts/Core (= 3.0.4)
   - Charts/Core (3.0.4)
   - DLRadioButton (1.4.12)
+  - FreeStreamer (4.0.0):
+    - Reachability (~> 3.0)
   - Kingfisher (4.1.0)
   - MBProgressHUD (1.2.0)
   - Moya (11.0.2):
@@ -15,6 +17,7 @@ PODS:
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
   - ObjectMapper (3.5.2)
+  - Reachability (3.2)
   - Result (3.2.4)
   - SnapKit (4.0.0)
   - SwiftyJSON (4.0.0)
@@ -23,6 +26,7 @@ DEPENDENCIES:
   - Alamofire-SwiftyJSON
   - Charts (= 3.0.4)
   - DLRadioButton (~> 1.4)
+  - FreeStreamer
   - Kingfisher (= 4.1.0)
   - MBProgressHUD
   - Moya (~> 11.0)
@@ -36,10 +40,12 @@ SPEC REPOS:
     - Alamofire-SwiftyJSON
     - Charts
     - DLRadioButton
+    - FreeStreamer
     - Kingfisher
     - MBProgressHUD
     - Moya
     - ObjectMapper
+    - Reachability
     - Result
     - SnapKit
     - SwiftyJSON
@@ -49,14 +55,16 @@ SPEC CHECKSUMS:
   Alamofire-SwiftyJSON: 2b3649d57dc7bb2880fb8b86f8bb969397666916
   Charts: 0705898046257443f0afbbc3179f4b67507b6e48
   DLRadioButton: d7c4e225ed0e8013cef7be61455230c7557ad7c1
+  FreeStreamer: 7e9c976045701ac2f7e9c14c17245203c37bf2ea
   Kingfisher: f14df8cbe576bf55f211fa589e9869bceb4ea87d
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   Moya: a725035953bc1c0eb1be505ab903984501d82440
   ObjectMapper: b53ae947d370bf89423e86be7d4e2d2b2a8d3f40
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 77939aff90bcb9d95aba75ece4a2712523bed70a
+PODFILE CHECKSUM: 3288541e256e149008970b3bcb04d2c328ccedb7
 
 COCOAPODS: 1.9.1
