@@ -1,0 +1,6 @@
+module SuperPlayer {
+  umbrella header "SuperPlayer-umbrella.h"
+
+  export *
+  module * { export * }
+}
