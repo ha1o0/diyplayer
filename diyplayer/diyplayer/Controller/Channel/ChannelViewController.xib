@@ -24,10 +24,29 @@
                         <color key="titleColor" red="1" green="0.43137254899999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRI-11-zFd">
+                    <rect key="frame" x="180.5" y="184" width="53" height="44"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <state key="normal" title="播放"/>
+                    <connections>
+                        <action selector="play:" destination="-1" eventType="touchUpInside" id="kwH-wM-gYp"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Hv-mu-66p">
+                    <rect key="frame" x="182" y="297" width="53" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <state key="normal" title="暂停"/>
+                    <connections>
+                        <action selector="pause:" destination="-1" eventType="touchUpInside" id="fwP-PY-WYB"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="9YA-o1-fux" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="0ZZ-9s-1S4"/>
+                <constraint firstItem="XRI-11-zFd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="184" id="9nS-V9-LaA"/>
+                <constraint firstItem="XRI-11-zFd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dyX-6T-xTT"/>
                 <constraint firstItem="9YA-o1-fux" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="rAR-V3-KzJ"/>
             </constraints>
             <point key="canvasLocation" x="138" y="155"/>
