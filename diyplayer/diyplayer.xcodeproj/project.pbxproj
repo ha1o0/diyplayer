@@ -133,6 +133,7 @@
 		E9632E852442F3A1006D0266 /* DepartmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentModel.swift; sourceTree = "<group>"; };
 		E9632E882442F484006D0266 /* getDepartment.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = getDepartment.json; sourceTree = "<group>"; };
 		E9632E8C24431A44006D0266 /* BaseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDataModel.swift; sourceTree = "<group>"; };
+		E9632E90245089EE006D0266 /* diyplayer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "diyplayer-Bridging-Header.h"; sourceTree = "<group>"; };
 		E96DA14621319BC200752560 /* diyplayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = diyplayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E96DA14921319BC200752560 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E96DA15021319BC200752560 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -401,6 +402,7 @@
 				E96DA15521319BC200752560 /* Info.plist */,
 				CE0554F422CE382A00A9D4F3 /* juhua.gif */,
 				CE9261C222CD004900E8F6F3 /* loading.gif */,
+				E9632E90245089EE006D0266 /* diyplayer-Bridging-Header.h */,
 			);
 			path = diyplayer;
 			sourceTree = "<group>";
@@ -845,6 +847,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = win.iword.app.diyplayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/sidney/workspaces/diyplayer/diyplayer/diyplayer/diyplayer-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -862,6 +865,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = win.iword.app.diyplayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/sidney/workspaces/diyplayer/diyplayer/diyplayer/diyplayer-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
