@@ -16,7 +16,6 @@ target 'diyplayer' do
     pod 'SwiftyJSON', '~> 4.0'
     pod 'Alamofire-SwiftyJSON'
     pod 'FreeStreamer'
-    pod 'SuperPlayer'
     # pod objective-c
     pod 'MBProgressHUD'
 end

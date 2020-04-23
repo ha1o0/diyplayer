@@ -1,19 +1,4 @@
 PODS:
-  - AFNetworking (4.0.1):
-    - AFNetworking/NSURLSession (= 4.0.1)
-    - AFNetworking/Reachability (= 4.0.1)
-    - AFNetworking/Security (= 4.0.1)
-    - AFNetworking/Serialization (= 4.0.1)
-    - AFNetworking/UIKit (= 4.0.1)
-  - AFNetworking/NSURLSession (4.0.1):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (4.0.1)
-  - AFNetworking/Security (4.0.1)
-  - AFNetworking/Serialization (4.0.1)
-  - AFNetworking/UIKit (4.0.1):
-    - AFNetworking/NSURLSession
   - Alamofire (4.9.1)
   - Alamofire-SwiftyJSON (3.0.0):
     - Alamofire (~> 4.5)
@@ -25,9 +10,7 @@ PODS:
   - FreeStreamer (4.0.0):
     - Reachability (~> 3.0)
   - Kingfisher (4.1.0)
-  - Masonry (1.1.0)
   - MBProgressHUD (1.2.0)
-  - MMLayout (0.3.0)
   - Moya (11.0.2):
     - Moya/Core (= 11.0.2)
   - Moya/Core (11.0.2):
@@ -36,24 +19,8 @@ PODS:
   - ObjectMapper (3.5.2)
   - Reachability (3.2)
   - Result (3.2.4)
-  - SDWebImage (5.7.3):
-    - SDWebImage/Core (= 5.7.3)
-  - SDWebImage/Core (5.7.3)
   - SnapKit (4.0.0)
-  - SuperPlayer (3.2.4):
-    - AFNetworking (~> 4.0)
-    - Masonry (~> 1.1.0)
-    - MMLayout (~> 0.3.0)
-    - SDWebImage (~> 5.0)
-    - SuperPlayer/Player (= 3.2.4)
-  - SuperPlayer/Player (3.2.4):
-    - AFNetworking (~> 4.0)
-    - Masonry (~> 1.1.0)
-    - MMLayout (~> 0.3.0)
-    - SDWebImage (~> 5.0)
-    - TXLiteAVSDK_Player (= 7.2.8927)
   - SwiftyJSON (4.0.0)
-  - TXLiteAVSDK_Player (7.2.8927)
 
 DEPENDENCIES:
   - Alamofire-SwiftyJSON
@@ -65,52 +32,39 @@ DEPENDENCIES:
   - Moya (~> 11.0)
   - ObjectMapper (~> 3.3)
   - SnapKit (= 4.0.0)
-  - SuperPlayer
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   trunk:
-    - AFNetworking
     - Alamofire
     - Alamofire-SwiftyJSON
     - Charts
     - DLRadioButton
     - FreeStreamer
     - Kingfisher
-    - Masonry
     - MBProgressHUD
-    - MMLayout
     - Moya
     - ObjectMapper
     - Reachability
     - Result
-    - SDWebImage
     - SnapKit
-    - SuperPlayer
     - SwiftyJSON
-    - TXLiteAVSDK_Player
 
 SPEC CHECKSUMS:
-  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Alamofire-SwiftyJSON: 2b3649d57dc7bb2880fb8b86f8bb969397666916
   Charts: 0705898046257443f0afbbc3179f4b67507b6e48
   DLRadioButton: d7c4e225ed0e8013cef7be61455230c7557ad7c1
   FreeStreamer: 7e9c976045701ac2f7e9c14c17245203c37bf2ea
   Kingfisher: f14df8cbe576bf55f211fa589e9869bceb4ea87d
-  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
-  MMLayout: d559edecd69fbcb348368ba90917e047ab1c544e
   Moya: a725035953bc1c0eb1be505ab903984501d82440
   ObjectMapper: b53ae947d370bf89423e86be7d4e2d2b2a8d3f40
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
-  SDWebImage: 97351f6582ceca541ea294ba66a1fcb342a331c2
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
-  SuperPlayer: 85d0890dcae9affaaadbcdf698db2c34ccc55dd3
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
-  TXLiteAVSDK_Player: d3025ba5cfe50e0debbffd94b15b018cf34fe201
 
-PODFILE CHECKSUM: 85a28273c2f09d428f037a9cdc257c6a10dbba3c
+PODFILE CHECKSUM: 3288541e256e149008970b3bcb04d2c328ccedb7
 
 COCOAPODS: 1.9.1
