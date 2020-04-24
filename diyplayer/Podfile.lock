@@ -19,6 +19,9 @@ PODS:
   - ObjectMapper (3.5.2)
   - Reachability (3.2)
   - Result (3.2.4)
+  - SDWebImage (5.7.3):
+    - SDWebImage/Core (= 5.7.3)
+  - SDWebImage/Core (5.7.3)
   - SnapKit (4.0.0)
   - SwiftyJSON (4.0.0)
 
@@ -31,6 +34,7 @@ DEPENDENCIES:
   - MBProgressHUD
   - Moya (~> 11.0)
   - ObjectMapper (~> 3.3)
+  - SDWebImage (~> 5.0)
   - SnapKit (= 4.0.0)
   - SwiftyJSON (~> 4.0)
 
@@ -47,6 +51,7 @@ SPEC REPOS:
     - ObjectMapper
     - Reachability
     - Result
+    - SDWebImage
     - SnapKit
     - SwiftyJSON
 
@@ -62,9 +67,10 @@ SPEC CHECKSUMS:
   ObjectMapper: b53ae947d370bf89423e86be7d4e2d2b2a8d3f40
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  SDWebImage: 97351f6582ceca541ea294ba66a1fcb342a331c2
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 3288541e256e149008970b3bcb04d2c328ccedb7
+PODFILE CHECKSUM: f11e5d098aff5ca70154a4b97518b9983262c396
 
 COCOAPODS: 1.9.1

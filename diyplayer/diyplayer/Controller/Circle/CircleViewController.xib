@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CircleViewController" customModule="diyplayer" customModuleProvider="target">
             <connections>
+                <outlet property="bkgImageView" destination="8sO-BZ-Pyc" id="lb6-YR-Xge"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,20 +18,35 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HyD-Ym-Tcz">
-                    <rect key="frame" x="176" y="430" width="62" height="36"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <state key="normal" title="动态页">
-                        <color key="titleColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="8sO-BZ-Pyc">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="600" id="doA-bl-Moi"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gue-vD-6jO">
+                    <rect key="frame" x="158" y="743" width="98" height="41"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <state key="normal" title="更换图片">
+                        <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="changeImage:" destination="-1" eventType="touchUpInside" id="Vdg-iS-pSa"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="HyD-Ym-Tcz" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="AFw-bJ-5gi"/>
-                <constraint firstItem="HyD-Ym-Tcz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="IFQ-sE-xwS"/>
+                <constraint firstItem="gue-vD-6jO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GOV-fF-znO"/>
+                <constraint firstAttribute="trailing" secondItem="8sO-BZ-Pyc" secondAttribute="trailing" id="HOf-Wk-N0b"/>
+                <constraint firstItem="8sO-BZ-Pyc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="JDF-6e-PVn"/>
+                <constraint firstItem="8sO-BZ-Pyc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="S6X-x4-5oK"/>
+                <constraint firstItem="gue-vD-6jO" firstAttribute="top" secondItem="8sO-BZ-Pyc" secondAttribute="bottom" constant="143" id="uGH-9H-7MR"/>
             </constraints>
             <point key="canvasLocation" x="139" y="119"/>
         </view>
     </objects>
+    <resources>
+        <image name="launch" width="414" height="896"/>
+    </resources>
 </document>
