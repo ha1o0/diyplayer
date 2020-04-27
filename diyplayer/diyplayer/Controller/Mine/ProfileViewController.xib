@@ -10,6 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="diyplayer" customModuleProvider="target">
             <connections>
+                <outlet property="musicPlayerView" destination="EHP-OD-Q32" id="WI2-Ns-498"/>
+                <outlet property="otherView" destination="tWM-Tx-WQq" id="iVa-Ug-Rzr"/>
+                <outlet property="otherViewHeightConstraint" destination="LyD-IW-Neq" id="bmO-bM-g39"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,20 +25,46 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OaO-2m-Rp1" userLabel="contentView">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EHP-OD-Q32">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUB-3Z-1fF">
+                                            <rect key="frame" x="157.5" y="100" width="99" height="39"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                            <state key="normal" title="加载view1">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="loadView1:" destination="-1" eventType="touchUpInside" id="UVF-cB-mXN"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nrp-Lo-wua">
+                                            <rect key="frame" x="156.5" y="230.5" width="101" height="39"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                            <state key="normal" title="加载view2">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="loadView2:" destination="-1" eventType="touchUpInside" id="Gx3-Sn-4Rj"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
                                     <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
+                                        <constraint firstItem="Nrp-Lo-wua" firstAttribute="centerY" secondItem="EHP-OD-Q32" secondAttribute="centerY" id="N95-aD-X65"/>
+                                        <constraint firstItem="oUB-3Z-1fF" firstAttribute="top" secondItem="EHP-OD-Q32" secondAttribute="top" constant="100" id="cst-z1-BUx"/>
+                                        <constraint firstItem="Nrp-Lo-wua" firstAttribute="centerX" secondItem="EHP-OD-Q32" secondAttribute="centerX" id="ptH-vr-Ehs"/>
                                         <constraint firstAttribute="height" constant="500" id="xa1-7V-3Cn"/>
+                                        <constraint firstItem="oUB-3Z-1fF" firstAttribute="centerX" secondItem="EHP-OD-Q32" secondAttribute="centerX" id="ytR-sB-ZmM"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tWM-Tx-WQq">
-                                    <rect key="frame" x="0.0" y="500" width="414" height="600"/>
-                                    <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <rect key="frame" x="0.0" y="500" width="414" height="100"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="600" id="LyD-IW-Neq"/>
+                                        <constraint firstAttribute="height" constant="100" id="LyD-IW-Neq"/>
                                     </constraints>
                                 </view>
                             </subviews>
