@@ -42,14 +42,24 @@
                         <action selector="changeImage:" destination="-1" eventType="touchUpInside" id="Vdg-iS-pSa"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fJ-1E-8YH">
+                    <rect key="frame" x="122" y="580" width="170" height="39"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <state key="normal" title="去Collection View"/>
+                    <connections>
+                        <action selector="toCollectionView:" destination="-1" eventType="touchUpInside" id="HaT-2d-zKt"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="6fJ-1E-8YH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="AsL-bc-AmD"/>
                 <constraint firstItem="gue-vD-6jO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GOV-fF-znO"/>
                 <constraint firstAttribute="trailing" secondItem="8sO-BZ-Pyc" secondAttribute="trailing" id="HOf-Wk-N0b"/>
                 <constraint firstItem="8sO-BZ-Pyc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="JDF-6e-PVn"/>
                 <constraint firstItem="8sO-BZ-Pyc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="S6X-x4-5oK"/>
                 <constraint firstItem="6dV-ii-BpI" firstAttribute="top" secondItem="8sO-BZ-Pyc" secondAttribute="bottom" constant="50" id="nkG-QQ-sWe"/>
+                <constraint firstItem="6fJ-1E-8YH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="580" id="o6p-bE-XvF"/>
                 <constraint firstItem="6dV-ii-BpI" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tZk-fn-6mj"/>
                 <constraint firstItem="gue-vD-6jO" firstAttribute="top" secondItem="8sO-BZ-Pyc" secondAttribute="bottom" constant="143" id="uGH-9H-7MR"/>
             </constraints>

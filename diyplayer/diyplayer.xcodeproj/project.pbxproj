@@ -47,6 +47,14 @@
 		E9632E9A2455BE6E006D0266 /* MusicPlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9632E992455BE6E006D0266 /* MusicPlayerModel.swift */; };
 		E9632E9D2455C8C8006D0266 /* MusicListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9632E9B2455C8C8006D0266 /* MusicListViewController.swift */; };
 		E9632E9E2455C8C8006D0266 /* MusicListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9632E9C2455C8C8006D0266 /* MusicListViewController.xib */; };
+		E9632EA62459BEE1006D0266 /* GoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9632EA42459BEE1006D0266 /* GoodDetailViewController.swift */; };
+		E9632EA72459BEE1006D0266 /* GoodDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9632EA52459BEE1006D0266 /* GoodDetailViewController.xib */; };
+		E9632EAA2459BFD2006D0266 /* GoodIntroduceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9632EA82459BFD2006D0266 /* GoodIntroduceCollectionViewCell.swift */; };
+		E9632EAB2459BFD2006D0266 /* GoodIntroduceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9632EA92459BFD2006D0266 /* GoodIntroduceCollectionViewCell.xib */; };
+		E9632EAE2459BFF7006D0266 /* GoodDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9632EAC2459BFF7006D0266 /* GoodDetailCollectionViewCell.swift */; };
+		E9632EAF2459BFF7006D0266 /* GoodDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9632EAD2459BFF7006D0266 /* GoodDetailCollectionViewCell.xib */; };
+		E9632EB22459C02A006D0266 /* GoodRecommendedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9632EB02459C02A006D0266 /* GoodRecommendedCollectionViewCell.swift */; };
+		E9632EB32459C02A006D0266 /* GoodRecommendedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9632EB12459C02A006D0266 /* GoodRecommendedCollectionViewCell.xib */; };
 		E96DA14A21319BC200752560 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DA14921319BC200752560 /* AppDelegate.swift */; };
 		E96DA15121319BC200752560 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E96DA15021319BC200752560 /* Assets.xcassets */; };
 		E96DA15F21319BC200752560 /* diyplayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DA15E21319BC200752560 /* diyplayerTests.swift */; };
@@ -144,6 +152,14 @@
 		E9632E992455BE6E006D0266 /* MusicPlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerModel.swift; sourceTree = "<group>"; };
 		E9632E9B2455C8C8006D0266 /* MusicListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListViewController.swift; sourceTree = "<group>"; };
 		E9632E9C2455C8C8006D0266 /* MusicListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicListViewController.xib; sourceTree = "<group>"; };
+		E9632EA42459BEE1006D0266 /* GoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodDetailViewController.swift; sourceTree = "<group>"; };
+		E9632EA52459BEE1006D0266 /* GoodDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoodDetailViewController.xib; sourceTree = "<group>"; };
+		E9632EA82459BFD2006D0266 /* GoodIntroduceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodIntroduceCollectionViewCell.swift; sourceTree = "<group>"; };
+		E9632EA92459BFD2006D0266 /* GoodIntroduceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoodIntroduceCollectionViewCell.xib; sourceTree = "<group>"; };
+		E9632EAC2459BFF7006D0266 /* GoodDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		E9632EAD2459BFF7006D0266 /* GoodDetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoodDetailCollectionViewCell.xib; sourceTree = "<group>"; };
+		E9632EB02459C02A006D0266 /* GoodRecommendedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodRecommendedCollectionViewCell.swift; sourceTree = "<group>"; };
+		E9632EB12459C02A006D0266 /* GoodRecommendedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoodRecommendedCollectionViewCell.xib; sourceTree = "<group>"; };
 		E96DA14621319BC200752560 /* diyplayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = diyplayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E96DA14921319BC200752560 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E96DA15021319BC200752560 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -221,8 +237,11 @@
 		CE9261C422CD007F00E8F6F3 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				E9632EA32459BDE8006D0266 /* cell */,
 				CE9261C522CD009A00E8F6F3 /* CustomViewController.swift */,
 				CE9261C622CD009A00E8F6F3 /* CustomViewController.xib */,
+				E9632EA42459BEE1006D0266 /* GoodDetailViewController.swift */,
+				E9632EA52459BEE1006D0266 /* GoodDetailViewController.xib */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -372,6 +391,19 @@
 				E9632E882442F484006D0266 /* getDepartment.json */,
 			);
 			path = MockData;
+			sourceTree = "<group>";
+		};
+		E9632EA32459BDE8006D0266 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				E9632EA82459BFD2006D0266 /* GoodIntroduceCollectionViewCell.swift */,
+				E9632EA92459BFD2006D0266 /* GoodIntroduceCollectionViewCell.xib */,
+				E9632EAC2459BFF7006D0266 /* GoodDetailCollectionViewCell.swift */,
+				E9632EAD2459BFF7006D0266 /* GoodDetailCollectionViewCell.xib */,
+				E9632EB02459C02A006D0266 /* GoodRecommendedCollectionViewCell.swift */,
+				E9632EB12459C02A006D0266 /* GoodRecommendedCollectionViewCell.xib */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		E96DA13D21319BC200752560 = {
@@ -600,6 +632,7 @@
 				CE9261CC22CD063500E8F6F3 /* BaseViewController.xib in Resources */,
 				CEC16B9622C746F800F90ADE /* AdViewController.xib in Resources */,
 				E9F437252131B76F0011B517 /* LaunchScreen.xib in Resources */,
+				E9632EAF2459BFF7006D0266 /* GoodDetailCollectionViewCell.xib in Resources */,
 				CE0554F322CE351200A9D4F3 /* ball.gif in Resources */,
 				CEC16BA122C7500A00F90ADE /* BaseNavigationViewController.xib in Resources */,
 				CEBD2DC422E4BF2B00067B4A /* ChannelViewController.xib in Resources */,
@@ -607,8 +640,11 @@
 				E9632E982455BC5F006D0266 /* MusicItemTableViewCell.xib in Resources */,
 				CEC16BA622C7A91F00F90ADE /* HomeViewController.xib in Resources */,
 				E9CBF57B23B3A2FF00C157C1 /* ScrollTabViewController.xib in Resources */,
+				E9632EA72459BEE1006D0266 /* GoodDetailViewController.xib in Resources */,
 				CE9261C322CD004900E8F6F3 /* loading.gif in Resources */,
 				E9EA4426239BFE1D0022DD00 /* ProfileViewController.xib in Resources */,
+				E9632EAB2459BFD2006D0266 /* GoodIntroduceCollectionViewCell.xib in Resources */,
+				E9632EB32459C02A006D0266 /* GoodRecommendedCollectionViewCell.xib in Resources */,
 				E9EA4422239BFB6F0022DD00 /* CircleViewController.xib in Resources */,
 				E96DA15121319BC200752560 /* Assets.xcassets in Resources */,
 				CE9261C822CD009A00E8F6F3 /* CustomViewController.xib in Resources */,
@@ -681,13 +717,16 @@
 				E9632E7F2441AB12006D0266 /* DqmkxAPI.swift in Sources */,
 				CEC0070222DBAADD003AC089 /* UIImage+Custom.swift in Sources */,
 				E9EA4421239BFB6F0022DD00 /* CircleViewController.swift in Sources */,
+				E9632EB22459C02A006D0266 /* GoodRecommendedCollectionViewCell.swift in Sources */,
 				CEA1B47F230D8FA800385E19 /* StrInt.swift in Sources */,
 				E9E512FC243B792300B88892 /* LiveListView.swift in Sources */,
 				CEC16BA022C7500A00F90ADE /* BaseNavigationViewController.swift in Sources */,
 				CEC16BA522C7A91F00F90ADE /* HomeViewController.swift in Sources */,
 				CEBD2DBE22E4AA9A00067B4A /* TabBarViewController.swift in Sources */,
 				CEBD2DC322E4BF2B00067B4A /* ChannelViewController.swift in Sources */,
+				E9632EAA2459BFD2006D0266 /* GoodIntroduceCollectionViewCell.swift in Sources */,
 				CE9261CE22CD0BC200E8F6F3 /* UIColor+hex.swift in Sources */,
+				E9632EA62459BEE1006D0266 /* GoodDetailViewController.swift in Sources */,
 				E9F437322132BBAB0011B517 /* PlayViewController.swift in Sources */,
 				E9632E862442F3A1006D0266 /* DepartmentModel.swift in Sources */,
 				E9F4373C213580400011B517 /* TimeUtil.swift in Sources */,
@@ -696,6 +735,7 @@
 				E9F4373A21344ACA0011B517 /* CustomSlider.swift in Sources */,
 				CEC16B9522C746F800F90ADE /* AdViewController.swift in Sources */,
 				E9632E9D2455C8C8006D0266 /* MusicListViewController.swift in Sources */,
+				E9632EAE2459BFF7006D0266 /* GoodDetailCollectionViewCell.swift in Sources */,
 				E9F4373E213583B90011B517 /* Constants.swift in Sources */,
 				E9632E812441B21F006D0266 /* DqmkxProvider.swift in Sources */,
 				CE3D5EFA22C3D1FF00FE1F30 /* Image+Gif.swift in Sources */,

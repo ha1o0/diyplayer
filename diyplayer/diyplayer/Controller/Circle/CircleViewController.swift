@@ -25,6 +25,11 @@ class CircleViewController: CustomViewController {
         present(musicListPopController, animated: true, completion: nil)
     }
     
+    @IBAction func toCollectionView(_ sender: UIButton) {
+        let vc = GoodDetailViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     @IBAction func changeImage(_ sender: UIButton) {
         let imageUrls = [
             "https://is4-ssl.mzstatic.com/image/thumb/Music113/v4/01/9b/c1/019bc110-b53d-9da2-d987-945f5fafcf95/source/600x600bb.jpg",
