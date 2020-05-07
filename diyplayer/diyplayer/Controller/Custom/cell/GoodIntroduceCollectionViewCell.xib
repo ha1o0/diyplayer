@@ -18,20 +18,7 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QZX-Vd-Xmk">
                         <rect key="frame" x="0.0" y="0.0" width="151" height="135"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMj-cX-lZM">
-                                <rect key="frame" x="52" y="52" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="addHeight:" destination="gTV-IL-0wX" eventType="touchUpInside" id="gQf-bn-lty"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="FMj-cX-lZM" firstAttribute="centerX" secondItem="QZX-Vd-Xmk" secondAttribute="centerX" id="fkh-Rz-jdF"/>
-                            <constraint firstItem="FMj-cX-lZM" firstAttribute="centerY" secondItem="QZX-Vd-Xmk" secondAttribute="centerY" id="hSV-op-TyZ"/>
-                        </constraints>
                     </view>
                 </subviews>
             </view>

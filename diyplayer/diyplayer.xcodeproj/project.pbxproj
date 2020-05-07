@@ -36,6 +36,9 @@
 		CEC16BA122C7500A00F90ADE /* BaseNavigationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC16B9F22C7500A00F90ADE /* BaseNavigationViewController.xib */; };
 		CEC16BA522C7A91F00F90ADE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC16BA322C7A91F00F90ADE /* HomeViewController.swift */; };
 		CEC16BA622C7A91F00F90ADE /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC16BA422C7A91F00F90ADE /* HomeViewController.xib */; };
+		E951A15A246443290029D361 /* TestAutoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951A158246443290029D361 /* TestAutoTableViewCell.swift */; };
+		E951A15B246443290029D361 /* TestAutoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E951A159246443290029D361 /* TestAutoTableViewCell.xib */; };
+		E951A15D24644C0E0029D361 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951A15C24644C0E0029D361 /* UIView+Extension.swift */; };
 		E9632E7F2441AB12006D0266 /* DqmkxAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9632E7E2441AB12006D0266 /* DqmkxAPI.swift */; };
 		E9632E812441B21F006D0266 /* DqmkxProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9632E802441B21F006D0266 /* DqmkxProvider.swift */; };
 		E9632E842442F33C006D0266 /* Mapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9632E832442F33C006D0266 /* Mapable.swift */; };
@@ -140,6 +143,9 @@
 		E91525CF23F12FAE00B22D49 /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E91525D023F12FAE00B22D49 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E91525D123F12FAE00B22D49 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E951A158246443290029D361 /* TestAutoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAutoTableViewCell.swift; sourceTree = "<group>"; };
+		E951A159246443290029D361 /* TestAutoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestAutoTableViewCell.xib; sourceTree = "<group>"; };
+		E951A15C24644C0E0029D361 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		E9632E7E2441AB12006D0266 /* DqmkxAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DqmkxAPI.swift; sourceTree = "<group>"; };
 		E9632E802441B21F006D0266 /* DqmkxProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DqmkxProvider.swift; sourceTree = "<group>"; };
 		E9632E832442F33C006D0266 /* Mapable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapable.swift; sourceTree = "<group>"; };
@@ -361,6 +367,7 @@
 				CE9261CD22CD0BC200E8F6F3 /* UIColor+hex.swift */,
 				CEC006FF22DB93C4003AC089 /* UIImageView+URL.swift */,
 				CEC0070122DBAADD003AC089 /* UIImage+Custom.swift */,
+				E951A15C24644C0E0029D361 /* UIView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -477,6 +484,8 @@
 				E9632E962455BC5F006D0266 /* MusicItemTableViewCell.xib */,
 				E9632E9B2455C8C8006D0266 /* MusicListViewController.swift */,
 				E9632E9C2455C8C8006D0266 /* MusicListViewController.xib */,
+				E951A158246443290029D361 /* TestAutoTableViewCell.swift */,
+				E951A159246443290029D361 /* TestAutoTableViewCell.xib */,
 			);
 			path = Circle;
 			sourceTree = "<group>";
@@ -648,6 +657,7 @@
 				E9EA4422239BFB6F0022DD00 /* CircleViewController.xib in Resources */,
 				E96DA15121319BC200752560 /* Assets.xcassets in Resources */,
 				CE9261C822CD009A00E8F6F3 /* CustomViewController.xib in Resources */,
+				E951A15B246443290029D361 /* TestAutoTableViewCell.xib in Resources */,
 				E9F437332132BBAB0011B517 /* PlayViewController.xib in Resources */,
 				E9632E892442F484006D0266 /* getDepartment.json in Resources */,
 				CEBD2DBF22E4AA9A00067B4A /* TabBarViewController.xib in Resources */,
@@ -699,9 +709,11 @@
 				E9632E8D24431A44006D0266 /* BaseDataModel.swift in Sources */,
 				CEA1B481230D8FB100385E19 /* MoyaConfig.swift in Sources */,
 				CE9261CB22CD063500E8F6F3 /* BaseViewController.swift in Sources */,
+				E951A15D24644C0E0029D361 /* UIView+Extension.swift in Sources */,
 				CEA1B476230D8F8A00385E19 /* DMAPI.swift in Sources */,
 				E9632E972455BC5F006D0266 /* MusicItemTableViewCell.swift in Sources */,
 				CEA1B477230D8F8A00385E19 /* DMModel.swift in Sources */,
+				E951A15A246443290029D361 /* TestAutoTableViewCell.swift in Sources */,
 				CE2E97852251E97B00EC8CD3 /* Alamofire-SwiftyJSON.swift in Sources */,
 				E98C7E3D2449BD6300476C88 /* ErrorModel.swift in Sources */,
 				E9632E9A2455BE6E006D0266 /* MusicPlayerModel.swift in Sources */,

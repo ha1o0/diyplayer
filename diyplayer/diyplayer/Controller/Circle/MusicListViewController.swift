@@ -28,7 +28,7 @@ class MusicListViewController: UIViewController, UITableViewDelegate, UITableVie
             musicList.append(musicPlayerModel)
         }
         tableView.separatorStyle = .none
-        tableView.register(UINib(nibName: "MusicItemTableViewCell", bundle: nil), forCellReuseIdentifier: "MusicItemTableViewCell")
+        tableView.register(UINib(nibName: "TestAutoTableViewCell", bundle: nil), forCellReuseIdentifier: "TestAutoTableViewCell")
         tableView.delegate = self
         tableView.dataSource = self
         tableView.estimatedRowHeight = 100
@@ -94,8 +94,10 @@ extension MusicListViewController {
 
 // MARK: - TabelViewDataSource
 extension MusicListViewController {
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MusicItemTableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TestAutoTableViewCell", for: indexPath) as! TestAutoTableViewCell
+        cell.targetButton.tag = indexPath.row
         return cell
     }
     
