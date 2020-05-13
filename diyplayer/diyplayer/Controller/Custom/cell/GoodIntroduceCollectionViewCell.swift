@@ -39,7 +39,7 @@ class GoodIntroduceCollectionViewCell: UICollectionViewCell {
             relativeConstaint = tempview.snp.bottom
         }
         cellContentView.snp.makeConstraints { (maker) in
-            maker.height.equalTo(height * CGFloat(arraylist.count))
+            maker.height.equalTo(height * CGFloat(arraylist.count)).priority(999)
         }
     }
 //    @IBAction func addHeight(_ sender: UIButton) {

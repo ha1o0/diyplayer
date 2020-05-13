@@ -32,7 +32,7 @@
             <connections>
                 <outlet property="cellContentView" destination="QZX-Vd-Xmk" id="Pn1-nU-nhE"/>
             </connections>
-            <point key="canvasLocation" x="-604" y="142"/>
+            <point key="canvasLocation" x="-320" y="100"/>
         </collectionViewCell>
     </objects>
 </document>

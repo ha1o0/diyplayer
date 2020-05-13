@@ -58,7 +58,7 @@ extension GoodDetailViewController {
             return cell
         case 1:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GoodDetailCollectionViewCell", for: indexPath) as! GoodDetailCollectionViewCell
-            cell.setCellContent()
+            cell.setCellContent(collectionView: self.collectionView, indexPath: indexPath)
             return cell
         case 2:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GoodRecommendedCollectionViewCell", for: indexPath)
@@ -77,7 +77,10 @@ extension GoodDetailViewController {
     }
     
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: SCREEN_WIDTH, height: 500)
+//        if indexPath.section == 1 {
+//            return CGSize(width: SCREEN_WIDTH, height: 500)
+//        }
+//        return .zero
 //    }
     
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
