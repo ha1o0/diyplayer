@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChannelViewController" customModule="diyplayer" customModuleProvider="target">
             <connections>
+                <outlet property="imageView" destination="xLG-FE-yVC" id="UtI-vO-uvY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -41,11 +42,20 @@
                         <action selector="pause:" destination="-1" eventType="touchUpInside" id="fwP-PY-WYB"/>
                     </connections>
                 </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xLG-FE-yVC">
+                    <rect key="frame" x="157" y="606" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="US1-1r-hi7"/>
+                        <constraint firstAttribute="height" constant="100" id="yLd-I3-OLj"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="9YA-o1-fux" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="0ZZ-9s-1S4"/>
+                <constraint firstItem="xLG-FE-yVC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="3HT-gb-MDT"/>
                 <constraint firstItem="XRI-11-zFd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="184" id="9nS-V9-LaA"/>
+                <constraint firstItem="xLG-FE-yVC" firstAttribute="top" secondItem="9YA-o1-fux" secondAttribute="bottom" constant="140" id="Tx4-Fz-PXW"/>
                 <constraint firstItem="XRI-11-zFd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dyX-6T-xTT"/>
                 <constraint firstItem="9YA-o1-fux" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="rAR-V3-KzJ"/>
             </constraints>

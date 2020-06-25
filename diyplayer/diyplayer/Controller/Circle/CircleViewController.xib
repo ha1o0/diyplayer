@@ -50,6 +50,23 @@
                         <action selector="toCollectionView:" destination="-1" eventType="touchUpInside" id="HaT-2d-zKt"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GhX-XL-dPi">
+                    <rect key="frame" x="162" y="700" width="90" height="29"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal">
+                        <attributedString key="attributedTitle">
+                            <fragment content="圆角阴影测试">
+                                <attributes>
+                                    <font key="NSFont" size="15" name=".PingFangSC-Regular"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                    </state>
+                    <connections>
+                        <action selector="toCornerShadowVc:" destination="-1" eventType="touchUpInside" id="pgq-2J-wGs"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -63,7 +80,7 @@
                 <constraint firstItem="6dV-ii-BpI" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tZk-fn-6mj"/>
                 <constraint firstItem="gue-vD-6jO" firstAttribute="top" secondItem="8sO-BZ-Pyc" secondAttribute="bottom" constant="143" id="uGH-9H-7MR"/>
             </constraints>
-            <point key="canvasLocation" x="-533" y="91"/>
+            <point key="canvasLocation" x="-42" y="9"/>
         </view>
     </objects>
     <resources>

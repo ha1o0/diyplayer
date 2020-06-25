@@ -13,6 +13,9 @@ class GoodDetailViewController: UIViewController, UICollectionViewDelegate, UICo
     
 
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    var dataSource: [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let layout = UICollectionViewFlowLayout()
@@ -25,6 +28,7 @@ class GoodDetailViewController: UIViewController, UICollectionViewDelegate, UICo
         collectionView.delegate = self
         collectionView.contentInsetAdjustmentBehavior = .always
         registerCells()
+        dataSource = ["XIAOMI", "HUAWEI", "APPLE", "MEIZU"]
         // Do any additional setup after loading the view.
     }
     
@@ -44,7 +48,7 @@ extension GoodDetailViewController {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 2 {
-            return 10
+            return dataSource.count
         } else {
             return 1
         }
@@ -61,7 +65,8 @@ extension GoodDetailViewController {
             cell.setCellContent(collectionView: self.collectionView, indexPath: indexPath)
             return cell
         case 2:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GoodRecommendedCollectionViewCell", for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GoodRecommendedCollectionViewCell", for: indexPath) as! GoodRecommendedCollectionViewCell
+            cell.setCell(name: dataSource[indexPath.row])
             return cell
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GoodRecommendedCollectionViewCell", for: indexPath)
@@ -90,4 +95,15 @@ extension GoodDetailViewController {
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
 //        return 10
 //    }
+}
+
+extension GoodDetailViewController {
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        print(indexPath)
+        if indexPath.section == 2 && indexPath.row == dataSource.count - 1 {
+            let new: [String] = ["XIAOMI", "HUAWEI", "APPLE", "MEIZU"]
+            dataSource.append(contentsOf: new)
+            self.collectionView.reloadData()
+        }
+    }
 }

@@ -56,4 +56,25 @@ class ProfileViewController: CustomViewController {
             self.otherViewHeightConstraint.constant = self.view1.bounds.height + iHeight
         }
     }
+    
+    func findDisappearedNumbers(_ nums: [Int]) -> [Int] {
+        var result: [Int] = []
+        for index in 0..<nums.count {
+            let target = index + 1
+            if nums.contains(target) {
+                continue
+            }
+            result.append(target)
+        }
+        return result
+    }
+}
+
+
+public class ListNode {
+    public var val: Int
+    public var next: ListNode?
+    public init() { self.val = 0; self.next = nil; }
+    public init(_ val: Int) { self.val = val; self.next = nil; }
+    public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
 }

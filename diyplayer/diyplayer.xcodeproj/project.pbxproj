@@ -39,6 +39,8 @@
 		E951A15A246443290029D361 /* TestAutoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951A158246443290029D361 /* TestAutoTableViewCell.swift */; };
 		E951A15B246443290029D361 /* TestAutoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E951A159246443290029D361 /* TestAutoTableViewCell.xib */; };
 		E951A15D24644C0E0029D361 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951A15C24644C0E0029D361 /* UIView+Extension.swift */; };
+		E951A167247428C70029D361 /* TestCornerShadowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951A165247428C70029D361 /* TestCornerShadowTableViewCell.swift */; };
+		E951A168247428C70029D361 /* TestCornerShadowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E951A166247428C70029D361 /* TestCornerShadowTableViewCell.xib */; };
 		E9632E7F2441AB12006D0266 /* DqmkxAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9632E7E2441AB12006D0266 /* DqmkxAPI.swift */; };
 		E9632E812441B21F006D0266 /* DqmkxProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9632E802441B21F006D0266 /* DqmkxProvider.swift */; };
 		E9632E842442F33C006D0266 /* Mapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9632E832442F33C006D0266 /* Mapable.swift */; };
@@ -146,6 +148,8 @@
 		E951A158246443290029D361 /* TestAutoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAutoTableViewCell.swift; sourceTree = "<group>"; };
 		E951A159246443290029D361 /* TestAutoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestAutoTableViewCell.xib; sourceTree = "<group>"; };
 		E951A15C24644C0E0029D361 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		E951A165247428C70029D361 /* TestCornerShadowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCornerShadowTableViewCell.swift; sourceTree = "<group>"; };
+		E951A166247428C70029D361 /* TestCornerShadowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestCornerShadowTableViewCell.xib; sourceTree = "<group>"; };
 		E9632E7E2441AB12006D0266 /* DqmkxAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DqmkxAPI.swift; sourceTree = "<group>"; };
 		E9632E802441B21F006D0266 /* DqmkxProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DqmkxProvider.swift; sourceTree = "<group>"; };
 		E9632E832442F33C006D0266 /* Mapable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapable.swift; sourceTree = "<group>"; };
@@ -486,6 +490,8 @@
 				E9632E9C2455C8C8006D0266 /* MusicListViewController.xib */,
 				E951A158246443290029D361 /* TestAutoTableViewCell.swift */,
 				E951A159246443290029D361 /* TestAutoTableViewCell.xib */,
+				E951A165247428C70029D361 /* TestCornerShadowTableViewCell.swift */,
+				E951A166247428C70029D361 /* TestCornerShadowTableViewCell.xib */,
 			);
 			path = Circle;
 			sourceTree = "<group>";
@@ -646,6 +652,7 @@
 				CEC16BA122C7500A00F90ADE /* BaseNavigationViewController.xib in Resources */,
 				CEBD2DC422E4BF2B00067B4A /* ChannelViewController.xib in Resources */,
 				CE0554F522CE382B00A9D4F3 /* juhua.gif in Resources */,
+				E951A168247428C70029D361 /* TestCornerShadowTableViewCell.xib in Resources */,
 				E9632E982455BC5F006D0266 /* MusicItemTableViewCell.xib in Resources */,
 				CEC16BA622C7A91F00F90ADE /* HomeViewController.xib in Resources */,
 				E9CBF57B23B3A2FF00C157C1 /* ScrollTabViewController.xib in Resources */,
@@ -748,6 +755,7 @@
 				CEC16B9522C746F800F90ADE /* AdViewController.swift in Sources */,
 				E9632E9D2455C8C8006D0266 /* MusicListViewController.swift in Sources */,
 				E9632EAE2459BFF7006D0266 /* GoodDetailCollectionViewCell.swift in Sources */,
+				E951A167247428C70029D361 /* TestCornerShadowTableViewCell.swift in Sources */,
 				E9F4373E213583B90011B517 /* Constants.swift in Sources */,
 				E9632E812441B21F006D0266 /* DqmkxProvider.swift in Sources */,
 				CE3D5EFA22C3D1FF00FE1F30 /* Image+Gif.swift in Sources */,

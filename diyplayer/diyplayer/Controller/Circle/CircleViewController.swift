@@ -29,6 +29,8 @@ class CircleViewController: CustomViewController {
         let vc = GoodDetailViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    @IBAction func toCornerShadowVc(_ sender: UIButton) {
+    }
     
     @IBAction func changeImage(_ sender: UIButton) {
         let imageUrls = [

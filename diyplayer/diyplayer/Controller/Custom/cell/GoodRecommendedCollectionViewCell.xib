@@ -43,6 +43,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
                 <outlet property="cellContentView" destination="k2W-qn-aBc" id="gAG-TL-Fpp"/>
+                <outlet property="name" destination="Pwe-SU-uQg" id="JiE-oU-s5f"/>
             </connections>
             <point key="canvasLocation" x="139" y="121"/>
         </collectionViewCell>

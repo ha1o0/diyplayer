@@ -11,6 +11,7 @@ import UIKit
 class GoodRecommendedCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var cellContentView: UIView!
+    @IBOutlet weak var name: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,6 +21,10 @@ class GoodRecommendedCollectionViewCell: UICollectionViewCell {
         
     }
 
+    func setCell(name: String) {
+        self.name.text = name
+    }
+    
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
         let autoLayoutAttributes = super.preferredLayoutAttributesFitting(layoutAttributes)
         let targetSize = CGSize(width: 167, height: 255)
