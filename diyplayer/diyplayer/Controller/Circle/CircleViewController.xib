@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CircleViewController" customModule="diyplayer" customModuleProvider="target">
             <connections>
-                <outlet property="bkgImageView" destination="8sO-BZ-Pyc" id="lb6-YR-Xge"/>
+                <outlet property="bkgImageView" destination="8sO-BZ-Pyc" id="dwl-Gi-61V"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,13 +19,13 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="8sO-BZ-Pyc">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="8sO-BZ-Pyc" customClass="ZImageCropperView" customModule="ZImageCropper">
+                    <rect key="frame" x="0.0" y="100" width="414" height="500"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="600" id="doA-bl-Moi"/>
+                        <constraint firstAttribute="height" constant="500" id="doA-bl-Moi"/>
                     </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dV-ii-BpI">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dV-ii-BpI">
                     <rect key="frame" x="158" y="650" width="98" height="41"/>
                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                     <state key="normal" title="弹出列表"/>
@@ -32,17 +33,17 @@
                         <action selector="popList:" destination="-1" eventType="touchUpInside" id="FjH-ha-Iv1"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gue-vD-6jO">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gue-vD-6jO">
                     <rect key="frame" x="158" y="743" width="98" height="41"/>
                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                     <state key="normal" title="更换图片">
-                        <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleColor" systemColor="systemPinkColor"/>
                     </state>
                     <connections>
                         <action selector="changeImage:" destination="-1" eventType="touchUpInside" id="Vdg-iS-pSa"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fJ-1E-8YH">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fJ-1E-8YH">
                     <rect key="frame" x="122" y="580" width="170" height="39"/>
                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                     <state key="normal" title="去Collection View"/>
@@ -50,14 +51,14 @@
                         <action selector="toCollectionView:" destination="-1" eventType="touchUpInside" id="HaT-2d-zKt"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GhX-XL-dPi">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GhX-XL-dPi">
                     <rect key="frame" x="162" y="700" width="90" height="29"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal">
                         <attributedString key="attributedTitle">
                             <fragment content="圆角阴影测试">
                                 <attributes>
-                                    <font key="NSFont" size="15" name=".PingFangSC-Regular"/>
+                                    <font key="NSFont" metaFont="system" size="15"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                 </attributes>
                             </fragment>
@@ -74,16 +75,19 @@
                 <constraint firstItem="gue-vD-6jO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GOV-fF-znO"/>
                 <constraint firstAttribute="trailing" secondItem="8sO-BZ-Pyc" secondAttribute="trailing" id="HOf-Wk-N0b"/>
                 <constraint firstItem="8sO-BZ-Pyc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="JDF-6e-PVn"/>
-                <constraint firstItem="8sO-BZ-Pyc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="S6X-x4-5oK"/>
+                <constraint firstItem="8sO-BZ-Pyc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="S6X-x4-5oK"/>
                 <constraint firstItem="6dV-ii-BpI" firstAttribute="top" secondItem="8sO-BZ-Pyc" secondAttribute="bottom" constant="50" id="nkG-QQ-sWe"/>
                 <constraint firstItem="6fJ-1E-8YH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="580" id="o6p-bE-XvF"/>
                 <constraint firstItem="6dV-ii-BpI" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tZk-fn-6mj"/>
                 <constraint firstItem="gue-vD-6jO" firstAttribute="top" secondItem="8sO-BZ-Pyc" secondAttribute="bottom" constant="143" id="uGH-9H-7MR"/>
             </constraints>
-            <point key="canvasLocation" x="-42" y="9"/>
+            <point key="canvasLocation" x="-42.028985507246382" y="8.7053571428571423"/>
         </view>
     </objects>
     <resources>
         <image name="launch" width="414" height="896"/>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

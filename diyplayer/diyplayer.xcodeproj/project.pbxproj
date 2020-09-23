@@ -927,7 +927,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = win.iword.app.diyplayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/sidney/workspaces/diyplayer/diyplayer/diyplayer/diyplayer-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/sidney/workspace/diyplayer/diyplayer/diyplayer/diyplayer-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -945,7 +945,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = win.iword.app.diyplayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/sidney/workspaces/diyplayer/diyplayer/diyplayer/diyplayer-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/sidney/workspace/diyplayer/diyplayer/diyplayer/diyplayer-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

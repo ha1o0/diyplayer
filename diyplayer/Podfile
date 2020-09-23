@@ -19,5 +19,6 @@ target 'diyplayer' do
     pod 'FreeStreamer'
     # pod objective-c
     pod 'MBProgressHUD'
+    pod 'ZImageCropper'
 end
 	

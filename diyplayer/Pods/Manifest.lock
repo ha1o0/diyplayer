@@ -24,6 +24,7 @@ PODS:
   - SDWebImage/Core (5.7.3)
   - SnapKit (4.0.0)
   - SwiftyJSON (4.0.0)
+  - ZImageCropper (0.1.0)
 
 DEPENDENCIES:
   - Alamofire-SwiftyJSON
@@ -37,6 +38,7 @@ DEPENDENCIES:
   - SDWebImage (~> 5.0)
   - SnapKit (= 4.0.0)
   - SwiftyJSON (~> 4.0)
+  - ZImageCropper
 
 SPEC REPOS:
   trunk:
@@ -54,6 +56,7 @@ SPEC REPOS:
     - SDWebImage
     - SnapKit
     - SwiftyJSON
+    - ZImageCropper
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
@@ -70,7 +73,8 @@ SPEC CHECKSUMS:
   SDWebImage: 97351f6582ceca541ea294ba66a1fcb342a331c2
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+  ZImageCropper: 1a5518eea94f1ce903bbfebc860bfb023d27fc62
 
-PODFILE CHECKSUM: f11e5d098aff5ca70154a4b97518b9983262c396
+PODFILE CHECKSUM: 2420b46ac7acbfee183e573c37a33988955a62c1
 
 COCOAPODS: 1.9.1

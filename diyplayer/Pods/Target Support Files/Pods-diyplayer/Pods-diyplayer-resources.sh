@@ -97,10 +97,14 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "${PODS_ROOT}/SuperPlayer/SuperPlayer/Resource/SuperPlayer.bundle"
+  install_resource "${PODS_ROOT}/ALCameraViewController/ALCameraViewController/ViewController/ConfirmViewController.xib"
+  install_resource "${PODS_ROOT}/ALCameraViewController/ALCameraViewController/CameraViewAssets.xcassets"
+  install_resource "${PODS_ROOT}/ALCameraViewController/ALCameraViewController/CameraView.strings"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "${PODS_ROOT}/SuperPlayer/SuperPlayer/Resource/SuperPlayer.bundle"
+  install_resource "${PODS_ROOT}/ALCameraViewController/ALCameraViewController/ViewController/ConfirmViewController.xib"
+  install_resource "${PODS_ROOT}/ALCameraViewController/ALCameraViewController/CameraViewAssets.xcassets"
+  install_resource "${PODS_ROOT}/ALCameraViewController/ALCameraViewController/CameraView.strings"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
