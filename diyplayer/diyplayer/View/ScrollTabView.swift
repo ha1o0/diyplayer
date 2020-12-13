@@ -40,6 +40,7 @@ class ScrollTabView: UIView {
     override func layoutSubviews() {
         underLineViewWidth = underLineView.frame.width
         underLineViewLeading = underLineView.frame.origin.x
+        print("aaa: ", underLineViewWidth)
     }
     
     
@@ -71,12 +72,12 @@ class ScrollTabView: UIView {
 
             contentWidth += (20 + width)
         }
-        self.setButtonSelected(selectedIndex: self.currentIndex)
+        self.setButtonSelected(selectedIndex: self.currentIndex, direction: 0)
         tabScrollView.contentSize = CGSize(width: contentWidth, height: tabScrollView.frame.size.height)
         self.setTabUnderline()
     }
     
-    func setButtonSelected(selectedIndex: Int) {
+    func setButtonSelected(selectedIndex: Int, direction: CGFloat) {
         for (index, subview) in tabScrollView.subviews.enumerated() {
             if (index >= tabTitles.count) {
                 break
@@ -88,6 +89,18 @@ class ScrollTabView: UIView {
             button.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(titleSize))
         }
         currentIndex = selectedIndex
+        if (currentIndex > 2) {
+            let currentContentOffset = tabScrollView.contentOffset
+            let contentSize = tabScrollView.contentSize
+            let maxOffsetX = contentSize.width - tabScrollView.frame.width
+            if (direction > 0) {
+                let shouldOffset = currentContentOffset.x + 50
+                tabScrollView.setContentOffset(CGPoint(x: shouldOffset < maxOffsetX ? shouldOffset : maxOffsetX, y: currentContentOffset.y), animated: true)
+            } else if (direction < 0) {
+                let shouldOffset = currentContentOffset.x - 50
+                tabScrollView.setContentOffset(CGPoint(x: shouldOffset > 0 ? shouldOffset : 0, y: currentContentOffset.y), animated: true)
+            }
+        }
     }
     
     func setTabUnderline() {
@@ -112,6 +125,16 @@ class ScrollTabView: UIView {
             return
         }
         let relativeOffset = offset - CGFloat(currentIndex)
+//        if (abs(relativeOffset) > 1) {
+//            if (relativeOffset > 0) {
+//                currentIndex += 1
+//            } else {
+//                currentIndex -= 1
+//            }
+//            slideUnderline(offset: offset)
+//            return
+//        }
+        print(relativeOffset)
         let buttons:[UIButton] = tabScrollView.subviews as! [UIButton]
         let currentButton = buttons[currentIndex]
         var subWidth = CGFloat.zero
@@ -129,7 +152,7 @@ class ScrollTabView: UIView {
         }
         
         underLineView.snp.remakeConstraints { (maker) in
-            
+
             let changeWidth = underLineViewWidth + relativeOffset * subWidth
             let changeLeading = underLineViewLeading + relativeOffset * subLeading
             maker.width.equalTo(changeWidth)
@@ -139,7 +162,7 @@ class ScrollTabView: UIView {
             if (CGFloat(Int(offset)) - offset == 0.0) {
                 underLineViewWidth = changeWidth
                 underLineViewLeading = changeLeading
-                setButtonSelected(selectedIndex: Int(offset))
+                setButtonSelected(selectedIndex: Int(offset), direction: relativeOffset)
             }
         }
         

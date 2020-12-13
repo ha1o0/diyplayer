@@ -192,7 +192,7 @@ class HomeViewController: UIViewController, UISearchBarDelegate, UICollectionVie
     func setScrollTab() {
         let scrollTab = ScrollTabView()
         scrollTab.hasBottomLine = true
-        scrollTab.tabTitles = ["直播", "抗击肺炎", "热门"]
+        scrollTab.tabTitles = ["直播", "抗击肺炎", "热门", "追番", "小康", "电影"]
         scrollTab.setUpView()
         self.view.addSubview(scrollTab)
         scrollTab.snp_makeConstraints { (maker) in
@@ -204,7 +204,10 @@ class HomeViewController: UIViewController, UISearchBarDelegate, UICollectionVie
         let a = ChannelViewController()
         let b = ProfileViewController()
         let c = CircleViewController()
-        let controllers = [a, b, c]
+        let d = ChannelViewController()
+        let e = ProfileViewController()
+        let f = CircleViewController()
+        let controllers = [a, b, c, d, e, f]
         var pageViewList = [UIView]()
         for controller in controllers {
             pageViewList.append(controller.view)
@@ -212,6 +215,7 @@ class HomeViewController: UIViewController, UISearchBarDelegate, UICollectionVie
         }
         
         liveListView = LiveListView(frame: CGRect(x: 0, y: 150, width: UIScreen.main.bounds.width, height: 600), pageViewList: pageViewList, callback: { (offset) in
+            print(offset)
             scrollTab.slideUnderline(offset: offset)
 //            print(offset)
         })
